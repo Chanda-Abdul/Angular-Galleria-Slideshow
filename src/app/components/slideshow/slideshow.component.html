@@ -1,0 +1,46 @@
+<section class="slide"
+         *ngIf="galleria && galleria.length > 0">
+
+  <img class="hero"
+       src="{{currentSlideInfo$.images.hero.small}}"
+       alt="{{currentSlideInfo$.name}}">
+
+  <button class="expand">
+    <img src="../../../assets/icons/icon-view-image.svg"
+         alt="">View Image</button>
+
+  <div class="info">
+    <h2>{{currentSlideInfo$.name}}</h2>
+    <h3>{{currentSlideInfo$.artist.name}}</h3>
+
+  </div>
+  <div class="description">
+    <img class="artist-thumbnail"
+         src="{{currentSlideInfo$.artist.image}}"
+         alt="{{currentSlideInfo$.artist.name}}">
+    <h4 class="year">{{currentSlideInfo$.year}}</h4>
+    <p class="text">{{currentSlideInfo$.description}}</p>
+    <a href="">Go to Source</a>
+  </div>
+</section>
+<!-- ? footer -->
+
+<section class="bottom-nav">
+  <hr>
+  <div class="nav-row">
+    <div class="title-info">
+      <h5>{{currentSlideInfo$.name}}</h5>
+      <h6>{{currentSlideInfo$.artist.name}}</h6>
+    </div>
+    <div class="nav">
+      <button [disabled]="currentSlideIndex <= 0">
+        <img src="../../../assets/icons/icon-back-button.svg"
+             alt=""
+             (click)="setPreviousSlide()"></button>
+      <button [disabled]="currentSlideIndex >= lastSlide">
+        <img src="../../../assets/icons/icon-next-button.svg"
+             alt=""
+             (click)="setNextSlide()"></button>
+    </div>
+  </div>
+</section>

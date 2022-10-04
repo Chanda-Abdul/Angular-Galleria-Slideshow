@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@use './variables.scss';
+@use "@material/image-list/mdc-image-list";
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+
+  background-color: variables.$granulated-sugar;
+}
+
+
+button {
+  @include variables.link-secondary;
+  background-color: variables.$granulated-sugar;
+  color: variables.$aged-moustache-grey;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  padding: 25px 10px;
+}
+
+button:hover {
+  color: variables.$black-hole;
+}
+
+a{
+  @include variables.link-secondary;
+}

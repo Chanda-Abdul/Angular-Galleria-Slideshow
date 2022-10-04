@@ -1,0 +1,36 @@
+@use '/src/variables';
+
+
+.nav {
+  @include variables.flex-row;
+  height: 80px;
+  width: 100%;
+
+  // justify-content: space-evenly;
+
+  // width: 100vw;
+
+
+  margin: 0 1em;
+  padding: 0 1em;
+  // border-width: 90%;
+}
+
+.logo {
+  height: 32px;
+  width: 113px;
+
+}
+
+button {
+  height: 11px;
+  width: 175px;
+  margin-right: 0;
+}
+
+hr {
+  color: variables.$cold-morning;
+  height: 2px;
+  width: 100%;
+  margin: 0 auto;
+}

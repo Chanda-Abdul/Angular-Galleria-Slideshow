@@ -1,0 +1,152 @@
+@use '/src/variables';
+
+.slide {
+  @include variables.flex-column;
+  margin: 25px auto;
+  // height: 100%;
+}
+
+.hero {
+  position: relative;
+  height: 280px;
+  width: 327px;
+  margin-bottom: 75px;
+}
+
+.expand {
+  position: absolute;
+  @include variables.flex-row;
+  justify-content: space-around;
+  height: 40px;
+  width: 152px;
+  left: 40px;
+  top: 120px;
+  background: rgba(0, 0, 0, .7);
+}
+
+.info {
+  position: absolute;
+  @include variables.flex-column;
+  height: 133px;
+  width: 280px;
+  left: 24px;
+  padding-left: 15px;
+  top: 305px;
+  background-color: variables.$granulated-sugar;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, .95);
+}
+
+.info h2 {
+  @include variables.heading-m;
+  // height: 58px;
+  margin-bottom: 10px;
+  width: 232px;
+}
+
+.info h3 {
+  @include variables.subheading-primary;
+  color: variables.$aged-moustache-grey;
+  height: 58px;
+  width: 232px;
+}
+
+.description {
+  position: relative;
+  height: 461px;
+  width: 327px;
+  @include variables.flex-column;
+
+  align-items: flex-start;
+  margin-bottom: 75px;
+}
+
+
+.artist-thumbnail {
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  left: 0;
+  top: -50px;
+}
+
+.year {
+  position: absolute;
+  @include variables.display-type;
+  color: variables.$cold-morning;
+  opacity: .5;
+  z-index: -1;
+  font-size: 100px;
+  right: 0px;
+  top: -50px;
+}
+
+.text {
+  margin-top: 25px;
+  @include variables.body-type;
+  color: variables.$aged-moustache-grey;
+}
+
+.description a {
+  @include variables.link-secondary;
+  text-transform: uppercase;
+  margin-top: 25px;
+
+
+}
+
+hr {
+  color: variables.$black-hole;
+  width: 375px;
+}
+
+
+.bottom-nav {
+  // position: sticky;
+
+  // bottom: 0;
+  height: 72px;
+}
+
+
+.nav-row {
+  @include variables.flex-row;
+  align-items: stretch;
+  padding: 10px 25px;
+}
+button>img:disabled{
+  //fix this
+  color: variables.$cold-morning;
+}
+.title-info {
+  @include variables.flex-column;
+  height: 39px;
+  width: 180px;
+  align-items: flex-start;
+}
+
+.title-info h5 {
+  @include variables.body-type;
+  color: variables.$black-hole;
+  margin-bottom: 5px;
+}
+
+.title-info h6 {
+  @include variables.body-type;
+  color: variables.$black-hole;
+  opacity: 0.75;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+
+
+
+}
+
+.nav {
+  @include variables.flex-row;
+  width: 56px;
+}
+.nav img{
+  width: 16px;
+}

@@ -1,0 +1,33 @@
+<section class="content">
+  <button id="myButton" #button>myButton</button>
+
+
+  <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
+    <li class="mdc-image-list__item"
+        *ngFor="let artwork of galleria; let i = index">
+      <img class="mdc-image-list__image"
+           [src]="artwork.images.thumbnail"
+           alt="{{ artwork.name }}">
+           <div class="overlay"></div>
+      <div class="mdc-image-list__supporting thumbnail ">
+        <span class="info mdc-image-list__label">
+          <p>{{artwork.name}} </p>
+          <a>{{artwork.artist.name}}</a>
+
+        </span>
+      </div>
+    </li>
+
+  </ul>
+</section>
+
+
+<!-- <li class="mdc-image-list__item"
+        *ngFor="let artwork of galleria; let i = index">
+
+      <img class="mdc-image-list__image"
+           [src]="artwork.images.thumbnail"
+           >
+      <div class="mdc-image-list__supporting">
+
+      </div> -->
