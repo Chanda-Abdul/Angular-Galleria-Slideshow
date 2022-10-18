@@ -27,14 +27,15 @@
 .info {
   position: absolute;
   @include variables.flex-column;
-  height: 133px;
+  min-height: 133px;
   width: 280px;
   left: 24px;
+  padding-top: 15px;
   padding-left: 15px;
   top: 305px;
   background-color: variables.$granulated-sugar;
   align-items: flex-start;
-  background: rgba(255, 255, 255, .95);
+  // background: rgba(255, 255, 255, .97);
 }
 
 .info h2 {
@@ -53,10 +54,10 @@
 
 .description {
   position: relative;
-  height: 461px;
+  height: 517px;
   width: 327px;
   @include variables.flex-column;
-
+  justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 75px;
 }
@@ -67,7 +68,7 @@
   height: 64px;
   width: 64px;
   left: 0;
-  top: -50px;
+  top: -30px;
 }
 
 .year {
@@ -78,11 +79,11 @@
   z-index: -1;
   font-size: 100px;
   right: 0px;
-  top: -50px;
+  top: -20px;
 }
 
 .text {
-  margin-top: 25px;
+  margin-top: 75px;
   @include variables.body-type;
   color: variables.$aged-moustache-grey;
 }
@@ -103,25 +104,42 @@ hr {
 
 .bottom-nav {
   // position: sticky;
-
+margin: 0;
+padding: 0;
   // bottom: 0;
-  height: 72px;
+width: 100%;
 }
 
 
 .nav-row {
   @include variables.flex-row;
-  align-items: stretch;
+  // align-items: stretch;
   padding: 10px 25px;
+  height: 72px;
 }
-button>img:disabled{
-  //fix this
-  color: variables.$cold-morning;
+.nav-info{
+  max-width: 235px;
 }
+
+button {
+margin: 0;
+  padding: 0;
+  // height: fit-content;
+//   width: 16px;
+  // fill: variables.$cold-morning;
+}
+button svg{
+// height: 16px;
+  stroke: variables.$black-hole;
+}
+button:disabled > svg {
+
+  stroke: variables.$cold-morning;
+}
+
 .title-info {
   @include variables.flex-column;
   height: 39px;
-  width: 180px;
   align-items: flex-start;
 }
 
@@ -145,8 +163,10 @@ button>img:disabled{
 
 .nav {
   @include variables.flex-row;
-  width: 56px;
+  width: 76px;
 }
-.nav img{
-  width: 16px;
-}
+//  svg, g, path{
+//   width: 16px;
+//   height: 16px;
+// }
+

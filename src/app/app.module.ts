@@ -11,6 +11,7 @@ import { SlideshowComponent } from './components/slideshow/slideshow.component';
 import { ThumbnailComponent } from './components/thumbnail/thumbnail.component';
 import { SlideDetailsComponent } from './components/slide-details/slide-details.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import {  ThumbnailDetailDirective } from './directives/thumbnail-detail-directive.directive';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     SlideshowComponent,
     ThumbnailComponent,
     SlideDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+   ThumbnailDetailDirective
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ThumbnailComponent]
 })
 export class AppModule { }

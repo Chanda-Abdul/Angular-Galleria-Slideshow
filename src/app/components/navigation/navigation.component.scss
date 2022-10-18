@@ -29,8 +29,8 @@ button {
 }
 
 hr {
-  color: variables.$cold-morning;
-  height: 2px;
-  width: 100%;
-  margin: 0 auto;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  border: 1px solid variables.$cold-morning;
 }
