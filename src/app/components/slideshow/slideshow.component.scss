@@ -3,7 +3,7 @@
 .slide {
   @include variables.flex-column;
   margin: 25px auto;
-  // height: 100%;
+  // z-index: 0;
 }
 
 .hero {
@@ -16,36 +16,47 @@
 .expand {
   position: absolute;
   @include variables.flex-row;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
   height: 40px;
   width: 152px;
   left: 40px;
   top: 120px;
-  background: rgba(0, 0, 0, .7);
+  padding: 0 20px;
+  background: variables.$black-hole;
+  opacity: .75;
+  color: variables.$granulated-sugar;
+}
+
+.expand:hover {
+  background: variables.$aged-moustache-grey;
 }
 
 .info {
   position: absolute;
   @include variables.flex-column;
-  min-height: 133px;
+  height: 104px;
   width: 280px;
-  left: 24px;
+  left: 0px;
   padding-top: 15px;
   padding-left: 15px;
   top: 305px;
   background-color: variables.$granulated-sugar;
-  align-items: flex-start;
-  // background: rgba(255, 255, 255, .97);
+  align-items: center;
 }
 
-.info h2 {
+.title {
+  width: 232px;
+  height: 56px;
+}
+
+.title h2 {
   @include variables.heading-m;
-  // height: 58px;
   margin-bottom: 10px;
   width: 232px;
 }
 
-.info h3 {
+.title h3 {
   @include variables.subheading-primary;
   color: variables.$aged-moustache-grey;
   height: 58px;
@@ -76,7 +87,7 @@
   @include variables.display-type;
   color: variables.$cold-morning;
   opacity: .5;
-  z-index: -1;
+  // z-index: 1;
   font-size: 100px;
   right: 0px;
   top: -20px;
@@ -85,54 +96,56 @@
 .text {
   margin-top: 75px;
   @include variables.body-type;
+  font-weight: 500;
   color: variables.$aged-moustache-grey;
+  z-index: 1;
 }
 
-.description a {
+.source {
   @include variables.link-secondary;
   text-transform: uppercase;
   margin-top: 25px;
+}
 
-
+.source:hover {
+  color: variables.$black-hole;
 }
 
 hr {
-  color: variables.$black-hole;
-  width: 375px;
+  color: variables.$bleached-silk;
+  width: 100%;
 }
-
 
 .bottom-nav {
-  // position: sticky;
-margin: 0;
-padding: 0;
-  // bottom: 0;
-width: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
-
 
 .nav-row {
   @include variables.flex-row;
-  // align-items: stretch;
   padding: 10px 25px;
   height: 72px;
 }
-.nav-info{
+
+.nav-info {
   max-width: 235px;
 }
 
 button {
-margin: 0;
+  margin: 0;
   padding: 0;
-  // height: fit-content;
-//   width: 16px;
-  // fill: variables.$cold-morning;
 }
-button svg{
-// height: 16px;
+
+button svg {
   stroke: variables.$black-hole;
 }
-button:disabled > svg {
+
+button:hover svg {
+  opacity: .5;
+}
+
+button:disabled>svg {
 
   stroke: variables.$cold-morning;
 }
@@ -156,17 +169,139 @@ button:disabled > svg {
   font-size: 10px;
   font-weight: 400;
   line-height: 12px;
-
-
-
 }
 
 .nav {
   @include variables.flex-row;
   width: 76px;
 }
-//  svg, g, path{
-//   width: 16px;
-//   height: 16px;
-// }
 
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  .slide {
+    margin: 40px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .hero {
+    height: 560px;
+    width: 475px;
+    object-fit: cover;
+    object-position: center 0;
+  }
+
+  .info {
+    width: 445px;
+    height: 302px;
+    top: 120px;
+    left: 275px;
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .expand {
+    left: 56px;
+    top: 633px;
+  }
+
+  .title {
+    width: 380px;
+    height: 192px;
+    margin: 15px auto 30px 30px;
+  }
+
+  .title h2 {
+    @include variables.heading-l;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .description {
+    height: 400px;
+    width: 572px;
+    padding-left: 115px;
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+
+
+  .artist-thumbnail {
+    height: 128px;
+    width: 128px;
+    top: -331px;
+    left: 520px;
+  }
+
+  .year {
+    @include variables.display-type;
+    color: variables.$cold-morning;
+    opacity: .5;
+    left: 0;
+    top: 0;
+  }
+
+  .nav-row {
+    padding: auto 40px;
+    height: 96px;
+  }
+
+  .title-info h5 {
+    @include variables.heading-s;
+    margin-bottom: 10px;
+  }
+
+  .title-info h6 {
+    @include variables.subheading-secondary;
+    opacity: 0.75;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .slide {
+    @include variables.flex-row;
+    justify-content: space-between;
+    width: 1360px;
+    height: 624px;
+    margin: 100px auto;
+  }
+
+  .hero {
+    height: 560px;
+    width: 475px;
+    object-fit: cover;
+    object-position: center 100%;
+  }
+
+  .info {
+    left: 450px;
+    top: 175px;
+  }
+
+  .expand {
+    left: 56px;
+    top: 693px;
+  }
+
+  .description {
+    height: 100%;
+    width: 476px;
+    padding-left: 0;
+    padding-top: 40px;
+    justify-content: space-between;
+  }
+
+  .artist-thumbnail {
+    top: 496px;
+    left: -375px;
+  }
+
+  .text {
+    width: 350px;
+  }
+
+  .source {
+    margin-bottom: 100px;
+  }
+}

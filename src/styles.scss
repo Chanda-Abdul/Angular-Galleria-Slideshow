@@ -3,15 +3,21 @@
 @use "@material/image-list/mdc-image-list";
 
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-html {
 
+html,
+body {
+height: 100vh;
+width: 100vw;
+  font-family: variables.$global-font;
   background-color: variables.$granulated-sugar;
+
 }
+
 
 
 button {
@@ -29,6 +35,6 @@ button:hover {
   color: variables.$black-hole;
 }
 
-a{
+a {
   @include variables.link-secondary;
 }

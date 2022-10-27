@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SlideshowComponent } from './components/slideshow/slideshow.component';
-import { ThumbnailComponent } from './components/thumbnail/thumbnail.component';
+import { LightboxComponent } from './components/lightbox/lightbox.component';
 import { SlideDetailsComponent } from './components/slide-details/slide-details.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {  ThumbnailDetailDirective } from './directives/thumbnail-detail-directive.directive';
@@ -21,7 +21,7 @@ import {  ThumbnailDetailDirective } from './directives/thumbnail-detail-directi
     NavigationComponent,
     FooterComponent,
     SlideshowComponent,
-    ThumbnailComponent,
+    LightboxComponent,
     SlideDetailsComponent,
     PageNotFoundComponent,
    ThumbnailDetailDirective
@@ -33,6 +33,6 @@ import {  ThumbnailDetailDirective } from './directives/thumbnail-detail-directi
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ThumbnailComponent]
+  // entryComponents: [LightboxComponent]
 })
 export class AppModule { }

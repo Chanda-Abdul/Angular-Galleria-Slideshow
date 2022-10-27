@@ -9,7 +9,7 @@
     <div *ngIf="!showStarted">
       <button type="button"
               class="start"
-              [routerLink]="'/slideshow'"
+              [routerLink]="['/slideshow/', 0]"
               (click)="showStarted = true">
         Start slideshow
       </button>
@@ -17,7 +17,7 @@
     <div *ngIf="showStarted">
       <button type="button"
               class="start"
-              [routerLink]="'/'"
+              [routerLink]="''"
               (click)="showStarted = false">
         Stop slideshow
       </button>

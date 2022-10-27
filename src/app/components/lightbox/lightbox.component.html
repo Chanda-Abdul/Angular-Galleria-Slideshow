@@ -1,0 +1,15 @@
+<div *ngIf="showImagePreview">
+  <div class="backdrop">
+    <img src="{{linkToImage}}"
+         alt="{{linkToImageName}}">
+    <div class="overlay"
+         (click)="onClose()"></div>
+  </div>
+  <div class="alert-box">
+    <button class="btn btn-close"
+            (click)="onClose()">Close</button>
+    <img class="preview"
+         src="{{linkToImage}}"
+         alt="{{linkToImageName}}">
+  </div>
+</div>

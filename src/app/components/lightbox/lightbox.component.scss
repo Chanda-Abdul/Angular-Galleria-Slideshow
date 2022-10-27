@@ -1,0 +1,73 @@
+@use '/src/variables';
+
+.backdrop {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500%;
+  min-height: 100%;
+  filter: grayscale(95%);
+  z-index: 4;
+
+  img {
+    z-index: 3;
+    object-fit: cover;
+    object-position: 0 0;
+    min-width: 100%;
+    height: 100vh;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 5;
+}
+
+.alert-box {
+  @include variables.flex-column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  width: 90vw;
+  height: 100%;
+}
+
+.lightbox {
+  position: relative;
+  top: 30vh;
+  left: 20vw;
+  width: 60vw;
+  padding: 16px;
+  z-index: 4;
+  background: white;
+  box-shadow: 0 2px 8px rbga(0, 0, 0, 0.26);
+}
+
+.btn-close {
+  font-size: 14px;
+  width: 90%;
+  letter-spacing: 3px;
+  @include variables.subheading-secondary;
+  // margin-right: 0;
+  color: variables.$granulated-sugar;
+  background: transparent;
+  text-align: right;
+  font-weight: 700;
+}
+
+.preview {
+  max-width: 90%;
+
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1220px) {}

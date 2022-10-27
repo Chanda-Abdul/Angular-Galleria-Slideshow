@@ -24,12 +24,33 @@ This is a solution to the [Galleria slideshow site challenge on Frontend Mentor]
 
 Users should be able to:
 
-- [ ] View the optimal layout for the app depending on their device's screen size
-  - [ ] Mobile @ 375px
-  - [ ] Tablet @  768 px
-  - [ ] Desktop @ 1440px
-- [ ] See hover states for all interactive elements on the page
+- [x] View the optimal layout for the app depending on their device's screen size
+  - [x] Mobile @ <b>375px</b>
+  - [x] Tablet @  <b>768px</b>
+  - [x] Desktop @ <b>1440px</b>
+- [X] See hover states for all interactive elements on the page
+<!-- 
+- [ ]  fix start/stop
+- [ ]  router by /:id
+- [ ] progress bar
+- [ ] pause button?
+- [ ] footer stickiness/height
+- *Observable*
+  -current slide
+  -current slide data
+  - start/stop/pause/next/prev
+  -show preview
+- *Service*
+  - start show
+  - end show
+  - pause show
+  - next slide
+  - prev slide
+  - show preview?
+
+ -->
 - [ ] Navigate the slideshow and view each painting in a lightbox
+- [ ] Deploy
 
 ## Screenshot
 ### Mobile View @ `375px`
@@ -89,8 +110,18 @@ const proudOfThisFunc = () => {
 
 
 ## Continued development
-- [ ] allow user to view more artwork by incorprating an API like [Artsy](https://developers.artsy.net/)?
-- [ ] after adding API, add infinite scroll? categories/collections?  ([Implementing Infinite Scrolling Using Angular](https://levelup.gitconnected.com/implementing-infinite-scrolling-using-angular-82c66f27e817))
+- [ ] Add Animations
+<!-- // On click
+// Navigate to: "Desktop - Gallery 1";
+// Animate: Dissolve;
+animation-timing-function: linear;
+animation-duration: 150ms; -->
+
+- [ ] allow user to view more artwork by incorprating an API like [Artsy](https://developers.artsy.net/) and categories/collections selection?
+<!-- fake backend?
+service, get more art?
+ -->
+- [ ] after adding [Artsy (/genes)](https://developers.artsy.net/v2/docs/genes) API, add infinite scroll ?  ([Implementing Infinite Scrolling Using Angular](https://levelup.gitconnected.com/implementing-infinite-scrolling-using-angular-82c66f27e817))
 - [ ] change from vertical to horizontal masonry layout
 - [ ] maybe combine this project with [Frontend Mentor - Modern Art Gallery Website Solution](https://github.com/Chanda-Abdul/Modern-Art-Gallery-Website). Create some kind of "view virtual gallery" option
 

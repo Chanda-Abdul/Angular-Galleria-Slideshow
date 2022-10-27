@@ -1,31 +1,24 @@
-<section class="content">
- 
-  <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
-    <li class="mdc-image-list__item"
-        *ngFor="let artwork of galleria; let i = index">
-      <img class="mdc-image-list__image"
-           [src]="artwork.images.thumbnail"
-           alt="{{ artwork.name }}">
-           <div class="overlay"></div>
-      <div class="mdc-image-list__supporting thumbnail ">
-        <span class="info mdc-image-list__label">
-          <p>{{artwork.name}} </p>
-          <a>{{artwork.artist.name}}</a>
+<div *ngIf="gal">
+  <section class="content">
 
-        </span>
-      </div>
-    </li>
+    <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
+      <li class="mdc-image-list__item"
+          *ngFor="let artwork of gal "
+          (click)="onSelectSlide(artwork.id)">
+        <img class="mdc-image-list__image"
+             [src]="artwork.images.gallery"
+             [alt]="artwork.name">
+        <div class="overlay"></div>
+        <div class="mdc-image-list__supporting lightbox ">
+          <span class="info mdc-image-list__label">
+            <p>{{artwork.name}} </p>
+            <a>{{artwork.artist.name}}</a>
 
-  </ul>
-</section>
+          </span>
+        </div>
+      </li>
 
+    </ul>
+  </section>
 
-<!-- <li class="mdc-image-list__item"
-        *ngFor="let artwork of galleria; let i = index">
-
-      <img class="mdc-image-list__image"
-           [src]="artwork.images.thumbnail"
-           >
-      <div class="mdc-image-list__supporting">
-
-      </div> -->
+</div>

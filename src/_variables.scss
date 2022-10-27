@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 
 $global-font: 'Libre Baskerville', serif;
@@ -11,11 +11,8 @@ $cold-morning: hsl(0, 0%, 90%);
 $bleached-silk: hsl(0, 0%, 95%);
 $granulated-sugar: hsl(0, 0%, 100%);
 
-
-
 /* Typography */
 @mixin display-type {
-  font-family: $global-font;
   color: $aged-moustache-grey;
   font-weight: 700;
   font-size: 200px;
@@ -23,7 +20,7 @@ $granulated-sugar: hsl(0, 0%, 100%);
 }
 @mixin heading-l {
   font-family: $global-font;
-  color: $black;
+  color: $black-hole;
   font-weight: 700;
   font-size: 56px;
   line-height: 64px;
@@ -48,15 +45,15 @@ $granulated-sugar: hsl(0, 0%, 100%);
 @mixin subheading-primary {
   font-family: $global-font;
   color: $black-hole;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 15px;
   line-height: 19px;
 }
 
 @mixin subheading-secondary {
   font-family: $global-font;
-  color: $black;
-  font-weight: 700;
+  color: $black-hole;
+  font-weight: 400;
   font-size: 13px;
   line-height: 17px;
 }
