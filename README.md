@@ -92,28 +92,29 @@ Users should be able to:
 
 To see how you can add code snippets, see below: -->
 
-```html
+<!-- ```html
 <h1>Some HTML code I'm proud of</h1>
-```
+``` -->
 
-```css
+<!-- ```css
 .proud-of-this-css {
   color: papayawhip;
 }
-```
+``` -->
 
-```js
+<!-- ```js
 const proudOfThisFunc = () => {
   console.log("🎉");
 };
-```
+``` -->
 
 
 ## Continued development
 ### Features to Add
 ➕ <b> ⏸ button to pause slideshow</b>
+
 ➕ <b> Animations</b>
-- [ ] Add Cool Animations
+<!-- - [ ] Add Cool Animations -->
 <!-- // On click
 // Navigate to: "Desktop - Gallery 1";
 // Animate: Dissolve;
@@ -138,9 +139,9 @@ service, get more art?
 
 
 ## Useful resources
-
-- 📽 [Flexbox or grid - How to decide?](https://youtu.be/3elGSZSWTbM) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- 💁🏽‍♀️ 🧱 [Material Design Image Lists for Masonry Layout](https://material.io/components/image-lists) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [What is Observable | Observables | Angular 12+](https://youtu.be/V4iMyVnQPqM) 📽 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Flexbox or grid - How to decide?](https://youtu.be/3elGSZSWTbM) 📽 - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Material Design Image Lists for Masonry Layout](https://material.io/components/image-lists) 💁🏽‍♀️ 🧱 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [RxJS in Angular: Reactive Development
 by Deborah Kurata (PluralSight Course)](https://www.pluralsight.com/courses/rxjs-angular-reactive-development) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Learn RxJs](https://www.learnrxjs.io/) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
