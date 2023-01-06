@@ -1,33 +1,31 @@
-<div *ngIf="currentSlide$">
+<div *ngIf="gallery">
   <img class="hero"
-       src="{{currentSlide$.images.hero.small}}"
-       alt="{{currentSlide$.name}}">
-</div>
+       src="{{currentSlideInfo$.images.hero.small}}"
+       alt="{{currentSlideInfo$.name}}">
 
-
-<button class="expand" (click)="showImagePreview = true">
+  <!-- <button class="expand" (click)="showImagePreview = true">
   <img src="../../../assets/icons/icon-view-image.svg"
        alt="">View Image</button>
 <app-lightbox *ngIf="showImagePreview"
               [showImagePreview]="showImagePreview"
-              [linkToImage]="currentSlide$.images.hero.large"></app-lightbox>
-<!-- <ng-template adHost></ng-template> -->
-<div class="info">
-  <div class="title">
-    <h2>{{currentSlide$.name}}</h2>
+              [linkToImage]="this.currentSlideInfo$.images.hero.large"></app-lightbox> -->
+  <!-- <ng-template adHost></ng-template> -->
 
-    <h3>{{currentSlide$.artist.name}}</h3>
+  <div class="info">
+    <div class="title">
+      <h2>{{this.currentSlideInfo$.name}}</h2>
+      <h3>{{this.currentSlideInfo$.artist.name}}</h3>
+    </div>
   </div>
 
-
-</div>
-<div class="description">
-  <img class="artist-thumbnail"
-       src="{{currentSlide$.artist.image}}"
-       alt="{{currentSlide$.artist.name}}">
-  <h4 class="year">{{currentSlide$.year}}</h4>
-  <p class="text">{{currentSlide$.description}}</p>
-  <a class="source"
-     href="{{currentSlide$.source}}"
-     target="_blank">Go to Source</a>
+  <div class="description">
+    <img class="artist-thumbnail"
+         src="{{this.currentSlideInfo$.artist.image}}"
+         alt="{{this.currentSlideInfo$.artist.name}}">
+    <h4 class="year">{{this.currentSlideInfo$.year}}</h4>
+    <p class="text">{{this.currentSlideInfo$.description}}</p>
+    <a class="source"
+       href="{{this.currentSlideInfo$.source}}"
+       target="_blank">Go to Source</a>
+  </div>
 </div>

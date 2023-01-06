@@ -12,6 +12,7 @@ import { LightboxComponent } from './components/lightbox/lightbox.component';
 import { SlideDetailsComponent } from './components/slide-details/slide-details.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {  ThumbnailDetailDirective } from './directives/thumbnail-detail-directive.directive';
+import { SlideshowService } from './services/slideshow.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import {  ThumbnailDetailDirective } from './directives/thumbnail-detail-directi
     AppRoutingModule,
 
   ],
-  providers: [],
+  providers: [SlideshowService],
   bootstrap: [AppComponent],
   // entryComponents: [LightboxComponent]
 })

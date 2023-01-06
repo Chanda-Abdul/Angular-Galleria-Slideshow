@@ -69,7 +69,7 @@ Users should be able to:
 ### Project Structure
 ...
 ### Approach
-## Built with
+### Built with
 
 
 - <b>[Angular](https://angular.io/)</b> (<b>JavaScript</b> framework)
@@ -110,19 +110,29 @@ const proudOfThisFunc = () => {
 
 
 ## Continued development
-- [ ] Add Animations
+### Features to Add
+➕ <b> ⏸ button to pause slideshow</b>
+➕ <b> Animations</b>
+- [ ] Add Cool Animations
 <!-- // On click
 // Navigate to: "Desktop - Gallery 1";
 // Animate: Dissolve;
 animation-timing-function: linear;
 animation-duration: 150ms; -->
 
+➕ <b> Option to view/add more artwork</b>
 - [ ] allow user to view more artwork by incorprating an API like [Artsy](https://developers.artsy.net/) and categories/collections selection?
 <!-- fake backend?
 service, get more art?
  -->
-- [ ] after adding [Artsy (/genes)](https://developers.artsy.net/v2/docs/genes) API, add infinite scroll ?  ([Implementing Infinite Scrolling Using Angular](https://levelup.gitconnected.com/implementing-infinite-scrolling-using-angular-82c66f27e817))
-- [ ] change from vertical to horizontal masonry layout
+➕ <b> Infinite Scroll</b>
+- [ ] after adding [Artsy (/genes)](https://developers.artsy.net/v2/docs/genes) API, add infinite scroll?  
+(✨[Implementing Infinite Scrolling Using Angular](https://levelup.gitconnected.com/implementing-infinite-scrolling-using-angular-82c66f27e817))
+
+➕ <b> Update masonry layout</b>
+- [ ] change from vertical to horizontal masonry layout, using a different library?
+
+➕ <b> Add landing page?</b>
 - [ ] maybe combine this project with [Frontend Mentor - Modern Art Gallery Website Solution](https://github.com/Chanda-Abdul/Modern-Art-Gallery-Website). Create some kind of "view virtual gallery" option
 
 
@@ -148,5 +158,4 @@ by Deborah Kurata (PluralSight Course)](https://www.pluralsight.com/courses/rxjs
 <!-- ## Acknowledgments
 
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.** -->
+ -->

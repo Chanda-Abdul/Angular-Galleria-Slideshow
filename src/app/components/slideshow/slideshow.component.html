@@ -1,6 +1,7 @@
 <section class="slide">
-<!--  -->
+
   <app-slide-details [routerLink]="['/slideshow', $slideId]"></app-slide-details>
+  <!-- <image-slider [slides]="slides"></image-slider> -->
 
 </section>
 <!-- ? footer -->
@@ -9,7 +10,7 @@
   <hr>
   <div class="nav-row">
     <div class="title-info">
-      <!-- <h5>{{currentSlideInfo$.name}}</h5> [routerLink]="['/slideshow', currslide.id]"-->
+      <!-- <h5>{{currentSlideInfo$.name}}</h5> [routerLink]="['/slideshow', currslide.id]" -->
       <!-- <h6>{{currentSlideInfo$.artist.name}}</h6> [disabled]="currentSlideIndex$ <= 0"-->
     </div>
     <div class="nav">
@@ -29,9 +30,9 @@
           </g>
         </svg>
       </button>
-      <!-- <button [disabled]="currentSlideIndex+1 >= lastSlide"> -->
+      <button>
 
-<!-- (click)="setNextSlide()" -->
+<!-- [disabled]="currentSlideIndex+1 >= lastSlide" (click)="setNextSlide()" -->
         <svg width="26"
              height="26"
              xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +46,7 @@
                   d="M24.708.5h1v22.775h-1z" />
           </g>
         </svg>
-      <!-- </button> -->
+      </button>
     </div>
   </div>
 </section>

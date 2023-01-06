@@ -7,7 +7,7 @@ import { ArtworkData } from '../artwork-data';
 })
 export class SlideshowService {
 
-  /* slide data */
+  /* slideshow data */
   get gallery() {
     return ArtworkData.galleria.map((art, index) => {
       return { id: index, ...art }
@@ -15,75 +15,52 @@ export class SlideshowService {
     );
   }
 
+  /* current slideindex */
   slideIndex$ = 0;
-set slideIndex(newIndex: number){
-  this.slideIndex$ = newIndex;
-}
+  get currentSlideIndex() {
+    return this.slideIndex$
+  }
+
+  /* current slide data */
+  currentSlideInfo$ = this.gallery[this.slideIndex$];
+  get currentSlideInfo() {
+    return this.currentSlideInfo$
+  }
 
   /* observe show lightbox image preview ?*/
   showLightBoxPreview$ = false;
 
 
- /* observe current slide action (start/stop/pause/next/prev)
-  ['none', 'start', 'end', 'pause', 'next', 'prev'] */
+  /* observe current slide action (start/stop/pause/next/prev)
+   ['none', 'start', 'end', 'pause', 'next', 'prev'] */
   private slideStatusSubject = new BehaviorSubject<string>('none');
   slideStatusAction$ = this.slideStatusSubject.asObservable();
-
 
   /* observe errors */
   private errorMessageSubject = new BehaviorSubject<string>('');
   errorMessage$ = this.errorMessageSubject.asObservable();
 
 
-
-
-
-
-
-
-  /* observe current slide data */
-
-
-
-  /* observe current slide */
-  //  currentSlideData$ = of(this.gallery$).pipe(
-  //   map(gallery => { return this.gallery[+this.currentSlideShowIndex$]})
-  //  )
-
-
-
-  //turn to output?
-
-
-
-
-
   /* observe current slide action (start/stop-end/pause/next/prev) */
   private showStatusActionSubject = new BehaviorSubject<string>('stopped');
   showStatus$ = this.showStatusActionSubject.asObservable();
 
-  // slide$ = combineLatest([
-  //   this.gallery$,
-  //   this.showStatus$
-  // ]).pipe(tap(data => console.log(data)));
-
   constructor() { }
 
- startSlideshow(startingSlideIndex: any){
-  //  slideObservable$ = this.slideObservable$
-   interval(2000)
-   .pipe(
-    startWith(startingSlideIndex),
-    takeWhile(i => i < this.gallery.length-1, true)
-    // take(2)
-  // take(this.gallery.length + 1- startingSlideIndex)
-  )
-  .subscribe((integer) => {
-    this.slideIndex$ = integer;
-    return integer;
-    console.log(this.gallery[this.slideIndex$], integer);
-  })
-
-
- }
+  startSlideshow(startingSlideIndex: number) {
+    interval(2000).pipe(
+      take(this.gallery.length - startingSlideIndex))
+      .subscribe({
+        next: (count) => {
+          this.slideIndex$ = count + startingSlideIndex;
+          this.currentSlideInfo$ = this.gallery[this.slideIndex$];
+        },
+        error: (error) => {
+          alert(error.message);
+        },
+        complete: () => {
+          console.log('Observable has completed and emitted all values');
+        }
+      });
+  }
 }

@@ -9,10 +9,10 @@ import { SlideshowComponent } from './components/slideshow/slideshow.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'slideshow', component: SlideshowComponent,
+    path: 'slideshow/:id', component: SlideshowComponent,
     children: [
-      { path: ':id', component: SlideDetailsComponent },
-      { path: ':id/preview', component: LightboxComponent }
+      // { path: ', component: SlideDetailsComponent },
+      { path: 'preview', component: LightboxComponent }
     ]
   },
   /* wildcard route */

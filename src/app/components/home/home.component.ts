@@ -37,7 +37,7 @@ console.log(this.slideshowService.gallery)
   }
 onSelectSlide(slideId:any){
   this.slideshowService.slideIndex$ = slideId;
-  this.slideshowService.slideIndex = slideId;
+  // this.slideshowService.slideIndex = slideId;
   // this.slideshowService.startSlideshow(+slideId);
   this.router.navigateByUrl('/slideshow/', slideId)
   console.log(this.slideshowService.slideIndex$, slideId);

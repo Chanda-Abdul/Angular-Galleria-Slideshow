@@ -28,7 +28,7 @@ export class SlideshowComponent implements OnInit, OnDestroy {
   // @ViewChild(PlaceholderDirective, { static: false }) alertHost: PlaceholderDirective;
 
   // private
-  closeSub = new  Subscription;
+  closeSub = new Subscription;
 
   constructor(
     private slideshowService: SlideshowService,
@@ -40,7 +40,7 @@ export class SlideshowComponent implements OnInit, OnDestroy {
     console.log(this.slideshowService.slideIndex$);
     // console.log(this.showImagePreview);
     if (this.autostart) {
-   //TO-DO input autostart
+      //TO-DO input autostart
       this.autostart = false;
     }
     // this.currentSlideIndex = 5;
@@ -114,19 +114,19 @@ export class SlideshowComponent implements OnInit, OnDestroy {
     this.showImagePreview = true;
     console.log(this.showImagePreview, event);
     this._cd.markForCheck();
-  //   //
-  //   const lightboxComponentFactory = this.componentFactoryResolver.resolveComponentFactory(
-  //     lightboxComponent);
-  //   // const hostViewContainerRef = this.alertHost.viewContainerRef;
-  //   // hostViewContainerRef.clear();
+    //   //
+    //   const lightboxComponentFactory = this.componentFactoryResolver.resolveComponentFactory(
+    //     lightboxComponent);
+    //   // const hostViewContainerRef = this.alertHost.viewContainerRef;
+    //   // hostViewContainerRef.clear();
 
-  //   const componentRef = hostViewContainerRef.createComponent(lightboxComponentFactory );
+    //   const componentRef = hostViewContainerRef.createComponent(lightboxComponentFactory );
 
-  //   componentRef.instance.lightbox = this.currentSlideInfo$;
-  //   this.closeSub = componentRef.instance.close.subscribe(() => {
-  //     this.closeSub.unsubscribe();
-  //     hostViewContainerRef.clear();
-  //   });
+    //   componentRef.instance.lightbox = this.currentSlideInfo$;
+    //   this.closeSub = componentRef.instance.close.subscribe(() => {
+    //     this.closeSub.unsubscribe();
+    //     hostViewContainerRef.clear();
+    //   });
   }
 
 }

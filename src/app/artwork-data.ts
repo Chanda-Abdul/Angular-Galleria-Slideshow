@@ -2,6 +2,7 @@ import { Artwork } from "./artwork.model";
 
 
 export class ArtworkData {
+  //TO DO - Why static?
   static galleria: Artwork[] = [
     {
       "name": "Starry Night",
