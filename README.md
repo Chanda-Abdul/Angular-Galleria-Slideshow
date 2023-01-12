@@ -28,21 +28,21 @@ Users should be able to:
   - [x] Mobile @ <b>375px</b>
   - [x] Tablet @  <b>768px</b>
   - [x] Desktop @ <b>1440px</b>
-- [X] See hover states for all interactive elements on the page
+- [x] See hover states for all interactive elements on the page
 <!-- 
-- [ ]  fix start/stop
+-
 - [ ]  router by /:id
 - [ ] progress bar
 - [ ] pause button?
 - [ ] footer stickiness/height
 - *Observable*
-  -current slide
-  -current slide data
+  
   - start/stop/pause/next/prev
   -show preview
+
 - *Service*
-  - start show
-  - end show
+  
+
   - pause show
   - next slide
   - prev slide
@@ -50,6 +50,7 @@ Users should be able to:
 
  -->
 - [ ] Navigate the slideshow and view each painting in a lightbox
+<!-- * Dynamic Component for this * -->
 - [ ] Deploy
 
 ## Screenshot
@@ -67,7 +68,16 @@ Users should be able to:
 ## My process
 ...
 ### Project Structure
-...
+
+- `/` Home Component
+  - masonry gallery view of all available images for slideshow
+- `/slide/:id` SlideDetail Component
+  - select one image from gallery view to see slide details, but slideshow does not start
+- `/slideshow` Slideshow Component
+  - SlideDetail Component, starting with first slide
+- `/slideshow/:id` Slideshow Component
+  - SlideDetail Component, starting with slide `:id`
+
 ### Approach
 ### Built with
 
@@ -86,6 +96,7 @@ Users should be able to:
 
 
 ## What I learned
+- Observables❗️
 - Masonry Layouts 🤦🏽‍♀️
 
 <!-- Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
@@ -140,6 +151,7 @@ service, get more art?
 
 ## Useful resources
 - [What is Observable | Observables | Angular 12+](https://youtu.be/V4iMyVnQPqM) 📽 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Unsubscribe to an Observable | Observables | Angular 12+](https://youtu.be/8j5kvLddNwM) 📽 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [Flexbox or grid - How to decide?](https://youtu.be/3elGSZSWTbM) 📽 - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Material Design Image Lists for Masonry Layout](https://material.io/components/image-lists) 💁🏽‍♀️ 🧱 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [RxJS in Angular: Reactive Development

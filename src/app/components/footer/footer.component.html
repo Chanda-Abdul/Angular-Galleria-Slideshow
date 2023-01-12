@@ -1,9 +1,54 @@
+<div class="container"><section class="bottom-nav">
+  <hr>
+  <div class="nav-row">
+    <div class="title-info">
+      <h5>{{currentSlideInfo$.name}}</h5>
+      <h6>{{currentSlideInfo$.artist.name}}</h6>
+    </div>
+    <div class="nav">
+      <button [disabled]="slideId$ <= 0"
+              (click)="setPreviousSlide()">
+
+        <svg width="26"
+             height="26"
+             xmlns="http://www.w3.org/2000/svg">
+
+          <g stroke=""
+             fill="none"
+             fill-rule="evenodd">
+            <path d="M24.166 1.843L3.627 12.113l20.539 10.269V1.843z"
+                  stroke-width="2" />
+            <path fill=""
+                  d="M.986.5h-1v22.775h1z" />
+          </g>
+        </svg>
+      </button>
+      <button [disabled]="slideId$+1 >= gallery"
+              (click)="setNextSlide()">
+
+        <svg width="26"
+             height="26"
+             xmlns="http://www.w3.org/2000/svg">
+          <g stroke=""
+             fill="none"
+             fill-rule="evenodd">
+            <path d="M1.528 1.843l20.538 10.27L1.528 22.382V1.843z"
+                  stroke-width="2" />
+            <path fill=""
+                  d="M24.708.5h1v22.775h-1z" />
+          </g>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
 <div class="attribution">
   Challenge by
   <a href='https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw'
      target='_blank'
      rel='noreferrer'>
-      Frontend Mentor
+    Frontend Mentor
   </a>
   . Coded by <a href='https://www.ChandaCodes.com'> Chanda Abdul</a>.
+</div>
 </div>

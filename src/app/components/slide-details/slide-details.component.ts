@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute,  } from '@angular/router';
-import { interval, take  } from 'rxjs';
+import { ActivatedRoute, } from '@angular/router';
+import { Observable, Subject, takeUntil } from 'rxjs';
 import { Artwork } from 'src/app/artwork.model';
 import { SlideshowService } from 'src/app/services/slideshow.service';
 
@@ -11,37 +11,26 @@ import { SlideshowService } from 'src/app/services/slideshow.service';
 })
 
 export class SlideDetailsComponent implements OnInit, OnDestroy {
-  gallery: Artwork[] = this.slideshowService.gallery;
-  currentSlideInfo$: Artwork | any = this.slideshowService.currentSlideInfo;
-  currentSlideIndex$: number = 0;
 
-  constructor(private slideshowService: SlideshowService, private route: ActivatedRoute) { }
+  currentSlideInfo$= this.slideshowService.currentSlideInfo;
+  currentSlideSubscription;
+  showImagePreview = false;
+
+  constructor(private slideshowService: SlideshowService) { }
 
   ngOnInit(): void {
-    this.slideshowService.startSlideshow(this.currentSlideIndex$)
 
-
-    interval(2500).pipe(
-      take(this.slideshowService.gallery.length))
-      .subscribe({
-        next: (count) => {
-          this.currentSlideIndex$ = count;
-          this.currentSlideInfo$ = this.gallery[this.currentSlideIndex$]
-             },
-        error: (error) => {
-          alert(error.message);
-        },
-        complete: () => {
-          console.log('Observable has completed and emitted all values');
-        }
-
-      });
-
-
-
+    // console.log(this.slideshowService.slideIndex$)
+    this.currentSlideSubscription =
+      this.slideshowService.slideEmitter$.subscribe(
+          () => {
+            this.currentSlideInfo$ = this.slideshowService.currentSlideInfo$
+            // console.log(this.currentSlideInfo$)
+          })
   }
 
   ngOnDestroy(): void {
+    this.currentSlideSubscription.unsubscribe();
   }
 
 }

@@ -9,14 +9,22 @@ import { SlideshowComponent } from './components/slideshow/slideshow.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   {
-    path: 'slideshow/:id', component: SlideshowComponent,
-    children: [
-      // { path: ', component: SlideDetailsComponent },
-      { path: 'preview', component: LightboxComponent }
-    ]
+    path: 'slideshow', component: SlideshowComponent,
+    // children: [
+    //   // { path: ', component: SlideDetailsComponent },
+    //   { path: 'preview', component: LightboxComponent }
+    // ]
+  },
+  {
+    path: 'slide/:id', component: SlideDetailsComponent
   },
   /* wildcard route */
-  { path: 'not-found', component: PageNotFoundComponent, data: { message: 'Page not found!' } },
+  {
+    path: 'not-found', component: PageNotFoundComponent,
+    data: {
+      message: 'Page not found!'
+    }
+  },
   { path: '**', redirectTo: '' }
 ];
 
