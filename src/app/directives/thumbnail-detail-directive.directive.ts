@@ -6,5 +6,5 @@ import { Directive, ViewContainerRef } from '@angular/core';
 export class ThumbnailDetailDirective {
 
   constructor(public viewContainerRef: ViewContainerRef) { }
-
+  // TO-DO => add lightbox functionality
 }

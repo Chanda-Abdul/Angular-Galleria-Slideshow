@@ -3,23 +3,24 @@
 
     <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
       <li class="mdc-image-list__item"
-          *ngFor="let artwork of gallery"[routerLink]="['/slide', artwork.id]"
-           routerLinkActive="active"
-           ariaCurrentWhenActive="page"
+          *ngFor="let artwork of gallery"
+          [routerLink]="['/slide', artwork.id]"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
           (click)="onSelectSlide(artwork.id)">
 
-          <img class="mdc-image-list__image"
-               [src]="artwork.images.gallery"
-               [alt]="artwork.name">
-          <div class="overlay"></div>
-          <div class="mdc-image-list__supporting lightbox ">
-            <span class="info mdc-image-list__label">
-              <p>{{artwork.name}} </p>
-              <a>{{artwork.artist.name}}</a>
+        <img class="mdc-image-list__image"
+             [src]="artwork.images.gallery"
+             [alt]="artwork.name">
+        <div class="overlay"></div>
+        <div class="mdc-image-list__supporting lightbox ">
+          <span class="info mdc-image-list__label">
+            <p>{{artwork.name}} </p>
+            <a>{{artwork.artist.name}}</a>
 
-            </span>
-          </div>
-   
+          </span>
+        </div>
+
       </li>
 
     </ul>

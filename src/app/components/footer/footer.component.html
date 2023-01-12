@@ -1,4 +1,6 @@
-<div class="container"><section class="bottom-nav">
+<div class="container">
+ <!-- TO-DO => Add Progress Bar here -->
+  <section class="bottom-nav">
   <hr>
   <div class="nav-row">
     <div class="title-info">
@@ -23,6 +25,7 @@
           </g>
         </svg>
       </button>
+      <!-- TO-DO *EXTRA* => add Pause Button -->
       <button [disabled]="slideId$+1 >= gallery"
               (click)="setNextSlide()">
 

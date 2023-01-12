@@ -11,6 +11,7 @@ export class FooterComponent implements OnInit {
   slideId$ = this.slideshowService.slideIndex$;
   currentSlideInfo$ = this.slideshowService.currentSlideInfo$;
   currentSlideSubscription;
+
   constructor(private slideshowService: SlideshowService) { }
 
   ngOnInit(): void {
@@ -18,12 +19,14 @@ export class FooterComponent implements OnInit {
       this.slideshowService.slideEmitter$.subscribe(() => {
         this.currentSlideInfo$ = this.slideshowService.currentSlideInfo$;
         this.slideId$ = this.slideshowService.slideIndex$;
-        // console.log(this.slideId$, this.currentSlideInfo$);
       });
   }
   ngOnDestroy(): void {
 
     this.currentSlideSubscription.unsubscribe();
+  }
+  slideShowProgression() {
+    // TO-DO => Add Progress Bar functionality here
   }
   setPreviousSlide() {
     this.slideshowService.setPreviousSlide();

@@ -25,33 +25,29 @@ This is a solution to the [Galleria slideshow site challenge on Frontend Mentor]
 Users should be able to:
 
 - [x] View the optimal layout for the app depending on their device's screen size
+<!-- - [ ] TO DO => Review CSS-->
   - [x] Mobile @ <b>375px</b>
   - [x] Tablet @  <b>768px</b>
   - [x] Desktop @ <b>1440px</b>
 - [x] See hover states for all interactive elements on the page
 <!-- 
--
 - [ ]  router by /:id
 - [ ] progress bar
 - [ ] pause button?
 - [ ] footer stickiness/height
 - *Observable*
   
-  - start/stop/pause/next/prev
+  - pause/
   -show preview
 
 - *Service*
-  
-
   - pause show
-  - next slide
-  - prev slide
   - show preview?
 
  -->
 - [ ] Navigate the slideshow and view each painting in a lightbox
 <!-- * Dynamic Component for this * -->
-- [ ] Deploy
+<!-- - [ ] TO DO => Deploy -->
 
 ## Screenshot
 ### Mobile View @ `375px`
@@ -75,7 +71,7 @@ Users should be able to:
   - select one image from gallery view to see slide details, but slideshow does not start
 - `/slideshow` Slideshow Component
   - SlideDetail Component, starting with first slide
-- `/slideshow/:id` Slideshow Component
+- `/slideshow/:id` || `/lightbox`Slideshow Component
   - SlideDetail Component, starting with slide `:id`
 
 ### Approach
@@ -84,7 +80,22 @@ Users should be able to:
 
 - <b>[Angular](https://angular.io/)</b> (<b>JavaScript</b> framework)
   - [<b>RxJs</b>(Reactive Extensions for JavaScript)](https://rxjs.dev/guide/overview) -  a library for composing async and event-based programs by using observable sequences(think of <b>RxJS</b> as <b>[Lodash](https://lodash.com/)</b> for events.) 
+    - [Observables
+]() 
+      - Subject
+      - Subscriptions
+      - `.pipe()`
+      - `take()`
+      - `takeUntil()`
+      - `interval()`
+  - [Routing]() 
+    - child routes
+    - wildcard routes
+  - [Dynamic Components]() 
+  - [Services]() - for cross component communication
    - [Angular Material](https://material.angular.io/)
+      - [Image lists
+](https://m2.material.io/components/image-lists#types) - Image lists display a collection of images in an organized grid. Image list was used to create Masonry layout
   - [TypeScript](https://www.typescriptlang.org/)
   - [JavaScript](https://www.javascript.com/)
 - <b>[Figma](https://www.figma.com/)</b> collaborative web application for interface design.
@@ -96,28 +107,47 @@ Users should be able to:
 
 
 ## What I learned
-- Observables❗️
-- Masonry Layouts 🤦🏽‍♀️
-
 <!-- Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below: -->
-
-<!-- ```html
-<h1>Some HTML code I'm proud of</h1>
-``` -->
-
-<!-- ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-``` -->
-
+ -->
+ - Observables❗️
+  - Observable Life Cycle🤔
+  - Subject
+  - Subscriptions
+  - `.pipe()`
+  - `take()`
+  - `takeUntil()`
+  - `interval()`
 <!-- ```js
 const proudOfThisFunc = () => {
   console.log("🎉");
 };
 ``` -->
+- Masonry Layouts 🤦🏽‍♀️
+  - [Angular Material Image lists
+](https://m2.material.io/components/image-lists#types) - Image lists display a collection of images in an organized grid. Image list was used to create Masonry layout
+- using `get()`
+<!-- ```html
+<h1>Some HTML code I'm proud of</h1>
+``` -->
+- [Dynamic Components]() 
+<!-- ```css
+.proud-of-this-css {
+  color: papayawhip;
+}
+``` -->
+- [Services]() - for cross component communication
+- Routing
+  - child routes
+  - wildcard routes
+
+
+
+
+
+
+
+
 
 
 ## Continued development

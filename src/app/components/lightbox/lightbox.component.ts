@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { SlideshowService } from 'src/app/services/slideshow.service';
 import { Artwork } from 'src/app/artwork.model';
 import { ThumbnailDetailDirective } from 'src/app/directives/thumbnail-detail-directive.directive';

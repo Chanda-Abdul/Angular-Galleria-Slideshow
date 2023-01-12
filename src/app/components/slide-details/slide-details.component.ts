@@ -1,7 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, } from '@angular/router';
-import { Observable, Subject, takeUntil } from 'rxjs';
-import { Artwork } from 'src/app/artwork.model';
 import { SlideshowService } from 'src/app/services/slideshow.service';
 
 @Component({

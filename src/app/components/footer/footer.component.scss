@@ -1,8 +1,10 @@
 @use '/src/variables';
 
-.container{
+.container {
   width: 100vw;
+  // TO-DO => Make footer sticky
 }
+
 hr {
   color: variables.$bleached-silk;
   width: 100%;

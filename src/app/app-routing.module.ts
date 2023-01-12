@@ -10,10 +10,11 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'slideshow', component: SlideshowComponent,
-    // children: [
-    //   // { path: ', component: SlideDetailsComponent },
-    //   { path: 'preview', component: LightboxComponent }
-    // ]
+    children: [
+      // TO-DO => update lightbox routing
+      { path: 'lightbox', component: LightboxComponent }
+
+    ]
   },
   {
     path: 'slide/:id', component: SlideDetailsComponent

@@ -34,6 +34,7 @@ import { SlideshowService } from './services/slideshow.service';
   ],
   providers: [SlideshowService],
   bootstrap: [AppComponent],
+  // TO-DO => update for lightbox
   // entryComponents: [LightboxComponent]
 })
 export class AppModule { }
