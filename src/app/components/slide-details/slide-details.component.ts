@@ -1,5 +1,4 @@
 import { Component, ComponentFactoryResolver, OnDestroy, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { CpuInfo } from 'os';
 import { SlideshowService } from 'src/app/services/slideshow.service';
 import { LightboxComponent } from '../lightbox/lightbox.component';
 
@@ -13,12 +12,12 @@ export class SlideDetailsComponent implements OnInit, OnDestroy {
 
   currentSlideInfo$ = this.slideshowService.currentSlideInfo;
   currentSlideSubscription;
-  // showImagePreview = false;
+
 
   // @ViewChild('placeholder', { read: ViewContainerRef, static: true });
 
-  // public placehodler!: ViewContainerRef;
-  showImagePreview = false;
+  // public placeholder!: ViewContainerRef;
+  showImagePreview;
   constructor(private slideshowService: SlideshowService, private resolver: ComponentFactoryResolver) { }
 
   ngOnInit(): void {
@@ -31,7 +30,7 @@ export class SlideDetailsComponent implements OnInit, OnDestroy {
       this.slideshowService.slideEmitter$.subscribe(
         () => {
           this.currentSlideInfo$ = this.slideshowService.currentSlideInfo$
-          // console.log(this.currentSlideInfo$)
+          // console.log(this.showImagePreview)
         })
   }
 
@@ -39,6 +38,16 @@ export class SlideDetailsComponent implements OnInit, OnDestroy {
     this.currentSlideSubscription.unsubscribe();
   }
 
-  // showImagePreview() { }
+  viewExpandedImage() {
+    //  console.log(this.showImagePreview)
+    //TO-DO => pause slide show
+    this.showImagePreview = true;
+
+  }
+
+  closeLightbox() {
+    this.showImagePreview = false;
+  }
+  private exitLightboxPreview(){}
 
 }

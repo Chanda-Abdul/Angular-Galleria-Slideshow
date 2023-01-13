@@ -1,12 +1,10 @@
 @use '/src/variables';
 
 .container {
-  width: 100vw;
-  // TO-DO => Make footer sticky
+  position:static;
+  bottom:0;
+  width: 100%;
 }
-
-
-
 
 .bottom-nav {
   margin: 0;

@@ -1,16 +1,16 @@
-<div *ngIf="currentSlideInfo$">
- <img class="hero"
+<div  class="container" *ngIf="currentSlideInfo$">
+  <img class="hero"
        src="{{currentSlideInfo$.images.hero.small}}"
        alt="{{currentSlideInfo$.name}}">
-<button class="expand" (click)="showImagePreview = true">
-  <img src="../../../assets/icons/icon-view-image.svg"
-       alt="">View Image</button>
-<!-- <ng-container #placeholder> </ng-container> -->
+  <button class="expand"
+          (click)="viewExpandedImage()">
+    <img src="../../../assets/icons/icon-view-image.svg"
+         alt="">View Image</button>
 
-<app-lightbox *ngIf="showImagePreview"
-              [showImagePreview]="showImagePreview"
-              [linkToImage]="this.currentSlideInfo$.images.hero.large"></app-lightbox> 
-  <!-- <ng-template adHost></ng-template> -->
+  <app-lightbox *ngIf="showImagePreview"
+                (close)="closeLightbox()"
+                (showImagePreview)="showImagePreview"
+                [linkToImage]="this.currentSlideInfo$.images.hero.large"></app-lightbox>
 
   <div class="info">
     <div class="title">
@@ -29,5 +29,5 @@
        href="{{this.currentSlideInfo$.source}}"
        target="_blank">Go to Source</a>
   </div>
-</div>
-<app-footer></app-footer>
+
+  <app-footer></app-footer>

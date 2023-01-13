@@ -30,6 +30,7 @@ export class SlideshowService {
   }
 
   showStarted$ = false;
+  //TO-DO => add event emitter?
 
   get showStatus() {
     return this.showStarted$;
@@ -42,6 +43,7 @@ export class SlideshowService {
   }
 
   slideEmitterSubscription;
+
 
   constructor() { }
 
@@ -58,17 +60,16 @@ export class SlideshowService {
           this.slideIndex$ = startingSlideIndex;
           this.currentSlideInfo$ = this.gallery[this.slideIndex$];
           this.slideEmitterEvent(this.currentSlideInfo$);
-          console.log(this.showStarted$)
+          if(this.slideIndex$ === this.gallery.length-1){
+            this.endSlideshow();  
+          }
         },
         error: (error) => {
           alert(error.message);
         },
         complete: () => {
-          this.showStarted$ = false;
-          console.log(this.showStarted$)
-          //TO-Do => Remove
-          console.log('Observable has completed and emitted all values');
-        }
+         
+          }
       });
   }
 
@@ -86,6 +87,7 @@ export class SlideshowService {
       this.slideIndex$ = this.gallery.length - 1;
     }
     this.updateSlide();
+    // this.slideEmitterEvent(this.currentSlideInfo$)
   }
 
   setNextSlide() {
@@ -95,21 +97,19 @@ export class SlideshowService {
       this.slideIndex$ = 0;
     }
     this.updateSlide();
+    // this.slideEmitterEvent(this.currentSlideInfo$)
   }
 
   updateSlide() {
     //TO-DO => update slide event emitter for next and prev while
     //slideshow is active
     this.currentSlideInfo$ = this.gallery[this.slideIndex$];
-    // this.slideEmitterEvent(this.currentSlideInfo$);
+    this.slideEmitterEvent(this.currentSlideInfo$);
   }
-  /* observe show lightbox image preview ?*/
-  // TO-DO  => add light box/Dynamic Component Functionality
-  showLightBoxPreview$ = false;
+
 
 
   /* observe errors */
-  // TO-DO *EXTRA* => track error messages
   private errorMessageSubject = new BehaviorSubject<string>('');
   errorMessage$ = this.errorMessageSubject.asObservable();
 
