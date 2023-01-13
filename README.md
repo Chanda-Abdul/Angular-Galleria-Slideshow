@@ -17,37 +17,29 @@ This is a solution to the [Galleria slideshow site challenge on Frontend Mentor]
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-<!-- - [Acknowledgments](#acknowledgments) -->
 # Overview
 
 ## The challenge
 
 Users should be able to:
-
 - [x] View the optimal layout for the app depending on their device's screen size
-<!-- - [ ] TO DO => Review CSS-->
+<!-- - [ ] TO DO => Review CSS -->
   - [x] Mobile @ <b>375px</b>
   - [x] Tablet @  <b>768px</b>
   - [x] Desktop @ <b>1440px</b>
 - [x] See hover states for all interactive elements on the page
-<!-- 
-- [ ]  router by /:id
-- [ ] progress bar
-- [ ] pause button?
-- [ ] footer stickiness/height
-- *Observable*
-  
-  - pause/
-  -show preview
-
-- *Service*
-  - pause show
-  - show preview?
-
- -->
 - [ ] Navigate the slideshow and view each painting in a lightbox
 <!-- * Dynamic Component for this * -->
-<!-- - [ ] TO DO => Deploy -->
+<!-- 
+- [ ]  router by /:id
+
+- [ ] footer stickiness/height
+- *Service*
+  - *Observable*
+  - pause show
+  - show preview?
+ -->
+<!-- - [ ] TO-DO => Deploy -->
 
 ## Screenshot
 ### Mobile View @ `375px`
@@ -93,9 +85,10 @@ Users should be able to:
     - wildcard routes
   - [Dynamic Components]() 
   - [Services]() - for cross component communication
-   - [Angular Material](https://material.angular.io/)
+   - [Angular Material](https://material.angular.io/) 
       - [Image lists
-](https://m2.material.io/components/image-lists#types) - Image lists display a collection of images in an organized grid. Image list was used to create Masonry layout
+](https://m2.material.io/components/image-lists#types) - display a collection of images in an organized grid. Image list was used to create the Masonry layout
+      - [Progress bar](https://material.angular.io/components/progress-bar/overview) - a horizontal progress-bar for indicating progress and activity.
   - [TypeScript](https://www.typescriptlang.org/)
   - [JavaScript](https://www.javascript.com/)
 - <b>[Figma](https://www.figma.com/)</b> collaborative web application for interface design.
@@ -111,13 +104,13 @@ Users should be able to:
 
  -->
  - Observables❗️
-  - Observable Life Cycle🤔
-  - Subject
-  - Subscriptions
-  - `.pipe()`
-  - `take()`
-  - `takeUntil()`
-  - `interval()`
+    - Observable Life Cycle🤔
+    - Subject
+    - Subscriptions
+    - `.pipe()`
+    - `take()`
+    - `takeUntil()`
+    - `interval()`
 <!-- ```js
 const proudOfThisFunc = () => {
   console.log("🎉");
@@ -141,17 +134,12 @@ const proudOfThisFunc = () => {
   - child routes
   - wildcard routes
 
-
-
-
-
-
-
-
-
-
 ## Continued development
 ### Features to Add
+
+➕ <b> Update masonry layout</b>
+- [ ] change from vertical to horizontal masonry layout, using a different library?
+
 ➕ <b> ⏸ button to pause slideshow</b>
 
 ➕ <b> Animations</b>
@@ -171,8 +159,6 @@ service, get more art?
 - [ ] after adding [Artsy (/genes)](https://developers.artsy.net/v2/docs/genes) API, add infinite scroll?  
 (✨[Implementing Infinite Scrolling Using Angular](https://levelup.gitconnected.com/implementing-infinite-scrolling-using-angular-82c66f27e817))
 
-➕ <b> Update masonry layout</b>
-- [ ] change from vertical to horizontal masonry layout, using a different library?
 
 ➕ <b> Add landing page?</b>
 - [ ] maybe combine this project with [Frontend Mentor - Modern Art Gallery Website Solution](https://github.com/Chanda-Abdul/Modern-Art-Gallery-Website). Create some kind of "view virtual gallery" option
@@ -196,9 +182,3 @@ by Deborah Kurata (PluralSight Course)](https://www.pluralsight.com/courses/rxjs
 - Frontend Mentor - [@Chanda-Abdul](https://www.frontendmentor.io/profile/Chanda-Abdul)
 - Website - [Chanda Codes](https://chandacodes.com/)
 - GitHub - [github.com/Chanda-Abdul](https://github.com/Chanda-Abdul)
-
-
-<!-- ## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
- -->

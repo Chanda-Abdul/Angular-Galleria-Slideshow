@@ -29,6 +29,12 @@ export class SlideshowService {
     return this.currentSlideInfo$
   }
 
+  showStarted$ = false;
+
+  get showStatus() {
+    return this.showStarted$;
+  }
+
   slideEmitter$ = new Subject<Artwork>();
 
   slideEmitterEvent(data: Artwork) {
@@ -40,20 +46,26 @@ export class SlideshowService {
   constructor() { }
 
   startSlideshow(startingSlideIndex: number) {
+    this.showStarted$ = true;
     this.slideEmitterSubscription = interval(5000)
       .pipe(
         take(this.gallery.length - startingSlideIndex)
       )
       .subscribe({
         next: (startingSlideIndex) => {
+          //To-Do => how to set next interval to number other than 0
+          this.showStarted$;
           this.slideIndex$ = startingSlideIndex;
           this.currentSlideInfo$ = this.gallery[this.slideIndex$];
           this.slideEmitterEvent(this.currentSlideInfo$);
+          console.log(this.showStarted$)
         },
         error: (error) => {
           alert(error.message);
         },
         complete: () => {
+          this.showStarted$ = false;
+          console.log(this.showStarted$)
           //TO-Do => Remove
           console.log('Observable has completed and emitted all values');
         }
@@ -61,6 +73,7 @@ export class SlideshowService {
   }
 
   endSlideshow() {
+    this.showStarted$ = false;
     this.slideEmitterSubscription.unsubscribe();
   }
 
@@ -88,7 +101,7 @@ export class SlideshowService {
     //TO-DO => update slide event emitter for next and prev while
     //slideshow is active
     this.currentSlideInfo$ = this.gallery[this.slideIndex$];
-    this.slideEmitterEvent(this.currentSlideInfo$);
+    // this.slideEmitterEvent(this.currentSlideInfo$);
   }
   /* observe show lightbox image preview ?*/
   // TO-DO  => add light box/Dynamic Component Functionality

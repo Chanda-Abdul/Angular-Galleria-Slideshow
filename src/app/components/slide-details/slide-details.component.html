@@ -1,14 +1,15 @@
-<ng-container *ngIf="currentSlideInfo$">
+<div *ngIf="currentSlideInfo$">
  <img class="hero"
        src="{{currentSlideInfo$.images.hero.small}}"
        alt="{{currentSlideInfo$.name}}">
 <button class="expand" (click)="showImagePreview = true">
   <img src="../../../assets/icons/icon-view-image.svg"
        alt="">View Image</button>
-  <!--
+<!-- <ng-container #placeholder> </ng-container> -->
+
 <app-lightbox *ngIf="showImagePreview"
               [showImagePreview]="showImagePreview"
-              [linkToImage]="this.currentSlideInfo$.images.hero.large"></app-lightbox> -->
+              [linkToImage]="this.currentSlideInfo$.images.hero.large"></app-lightbox> 
   <!-- <ng-template adHost></ng-template> -->
 
   <div class="info">
@@ -28,5 +29,5 @@
        href="{{this.currentSlideInfo$.source}}"
        target="_blank">Go to Source</a>
   </div>
-</ng-container>
+</div>
 <app-footer></app-footer>

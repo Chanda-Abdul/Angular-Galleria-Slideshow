@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SlideshowService } from 'src/app/services/slideshow.service';
 
 @Component({
   selector: 'app-navigation',
@@ -7,12 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  showStarted = false;
-  // slideId = 0;
+  showStarted$ = false;
+  showStatusSubscription;
 
-  constructor() { }
+  constructor(private slideshowService: SlideshowService) { }
 
   ngOnInit(): void {
+  }
+
+  startSlideShow() {
+    
+    this.slideshowService.startSlideshow(this.slideshowService.currentSlideIndex);
+    console.log(this.slideshowService.currentSlideIndex)
+    this.showStarted$ = this.slideshowService.showStatus;
+  }
+  endSlideShow() {
+    this.slideshowService.endSlideshow()
+    this.showStarted$ = this.slideshowService.showStatus;
   }
 
 }

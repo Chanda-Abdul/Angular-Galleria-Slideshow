@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { SlideshowService } from 'src/app/services/slideshow.service';
+// import { SlideshowService } from 'src/app/services/slideshow.service';
 import { Artwork } from 'src/app/artwork.model';
-import { ThumbnailDetailDirective } from 'src/app/directives/thumbnail-detail-directive.directive';
+// import { ThumbnailDetailDirective } from 'src/app/directives/thumbnail-detail-directive.directive';
 
 @Component({
   selector: 'app-lightbox',
@@ -12,16 +12,16 @@ export class LightboxComponent implements OnInit {
 
   @Input() thumbnail: Artwork;
 
-  @ViewChild(ThumbnailDetailDirective, {static: true})
+  // @ViewChild(ThumbnailDetailDirective, {static: true})
 
-  adHost!: ThumbnailDetailDirective;
+  // adHost!: ThumbnailDetailDirective;
 
   // @Output() close = new EventEmitter<void>();
   @Input() showImagePreview = true;
   @Input() linkToImage: any;
   @Input() linkToImageName: any;
 
-  constructor(private slideshowService: SlideshowService) { }
+  // constructor(private slideshowService: SlideshowService) { }
   ngOnInit(): void {
     // this.loadComponent();
     // console.log(this.linkToImage)

@@ -1,24 +1,24 @@
 <div class="nav">
   <div class="logo">
     <img src="../../../assets/images/logo.svg"
-         [routerLink]="'/'"
+         [routerLink]="''"
          alt="galleria-logo"
          class="logo">
   </div>
   <section class="start">
-    <div *ngIf="!showStarted">
+    <div *ngIf="!showStarted$">
       <button type="button"
               class="start"
               [routerLink]="['/slideshow/']"
-              (click)="showStarted = true">
+              (click)="startSlideShow()">
         Start slideshow
       </button>
     </div>
-    <div *ngIf="showStarted">
+    <div *ngIf="showStarted$">
       <button type="button"
               class="start"
               [routerLink]="''"
-              (click)="showStarted = false">
+              (click)="endSlideShow()">
         Stop slideshow
       </button>
     </div>

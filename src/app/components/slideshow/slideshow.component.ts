@@ -24,7 +24,7 @@ export class SlideshowComponent implements OnInit, OnDestroy {
     private _cd: ChangeDetectorRef
   ) { }
   ngOnInit(): void {
-    this.slideshowService.startSlideshow(this.slideId$);
+    // this.slideshowService.startSlideshow(this.slideId$);
     this.currentSlideSubscription =
       this.slideshowService.slideEmitter$.subscribe(() => {
         this.currentSlideInfo$ = this.slideshowService.currentSlideInfo$;
