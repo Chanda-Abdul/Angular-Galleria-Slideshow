@@ -9,7 +9,7 @@ This is a solution to the [Galleria slideshow site challenge on Frontend Mentor]
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -28,20 +28,19 @@ Users should be able to:
   - [x] Tablet @  <b>768px</b>
   - [x] Desktop @ <b>1440px</b>
 - [x] See hover states for all interactive elements on the page
-- [ ] Navigate the slideshow and view each painting in a lightbox
+- [x] Navigate the slideshow and view each painting in a lightbox
 <!-- * Dynamic Component for this * -->
 <!-- 
 - [ ]  router by /:id
 
-- [ ] footer stickiness/height
 - *Service*
-  - *Observable*
+
   - pause show
-  - show preview?
+
  -->
 <!-- - [ ] TO-DO => Deploy -->
 
-## Screenshot
+## Screenshots
 ### Mobile View @ `375px`
 <!-- ![](./screenshot.jpg) -->
 ### Tablet View @ `768px`
@@ -74,29 +73,21 @@ Users should be able to:
   - [<b>RxJs</b>(Reactive Extensions for JavaScript)](https://rxjs.dev/guide/overview) -  a library for composing async and event-based programs by using observable sequences(think of <b>RxJS</b> as <b>[Lodash](https://lodash.com/)</b> for events.) 
     - [Observables
 ]() 
-      - Subject
-      - Subscriptions
-      - `.pipe()`
-      - `take()`
-      - `takeUntil()`
-      - `interval()`
   - [Routing]() 
-    - child routes
-    - wildcard routes
-  - [Dynamic Components]() 
-  - [Services]() - for cross component communication
+  - [Dynamic Components](https://angular.io/guide/dynamic-component-loader) 
+  - [Services](https://angular.io/guide/creating-injectable-service) 
    - [Angular Material](https://material.angular.io/) 
       - [Image lists
 ](https://m2.material.io/components/image-lists#types) - display a collection of images in an organized grid. Image list was used to create the Masonry layout
       - [Progress bar](https://material.angular.io/components/progress-bar/overview) - a horizontal progress-bar for indicating progress and activity.
-  - [TypeScript](https://www.typescriptlang.org/)
-  - [JavaScript](https://www.javascript.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [JavaScript](https://www.javascript.com/)
 - <b>[Figma](https://www.figma.com/)</b> collaborative web application for interface design.
 - <b>[Sass](https://sass-lang.com/)/CSS</b> custom properties
   - Mobile-first workflow
   - Flexbox
   - CSS Grid
-- Semantic HTML5 markup
+- Semantic <b>HTML5</b> markup
 
 
 ## What I learned
@@ -173,7 +164,8 @@ service, get more art?
 - [RxJS in Angular: Reactive Development
 by Deborah Kurata (PluralSight Course)](https://www.pluralsight.com/courses/rxjs-angular-reactive-development) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Learn RxJs](https://www.learnrxjs.io/) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Angular - The Complete Guide (2023 Edition) by Maximilian Schwarzmüller (Udemy Course) => Dynamic Components
+](https://www.udemy.com/course/the-complete-guide-to-angular-2/) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 

@@ -1,10 +1,9 @@
 import { Directive, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[adHost]'
+  selector: '[appLightboxImagePreview]'
 })
-export class ThumbnailDetailDirective {
-
+export class LightboxImagePreviewDirective {
   constructor(public viewContainerRef: ViewContainerRef) { }
   // TO-DO => add lightbox functionality
 }

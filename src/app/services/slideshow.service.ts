@@ -47,7 +47,7 @@ export class SlideshowService {
 
   constructor() { }
 
-  startSlideshow(startingSlideIndex: number) {
+  startSlideshow(startingSlideIndex?: number) {
     this.showStarted$ = true;
     this.slideEmitterSubscription = interval(5000)
       .pipe(
@@ -61,14 +61,14 @@ export class SlideshowService {
           this.currentSlideInfo$ = this.gallery[this.slideIndex$];
           this.slideEmitterEvent(this.currentSlideInfo$);
           if(this.slideIndex$ === this.gallery.length-1){
-            this.endSlideshow();  
+            this.endSlideshow();
           }
         },
         error: (error) => {
           alert(error.message);
         },
         complete: () => {
-         
+
           }
       });
   }
@@ -86,7 +86,7 @@ export class SlideshowService {
     else {
       this.slideIndex$ = this.gallery.length - 1;
     }
-    this.updateSlide();
+    this.updateSlide(this.slideIndex$);
     // this.slideEmitterEvent(this.currentSlideInfo$)
   }
 
@@ -96,14 +96,15 @@ export class SlideshowService {
     } else {
       this.slideIndex$ = 0;
     }
-    this.updateSlide();
+    this.updateSlide(this.slideIndex$);
     // this.slideEmitterEvent(this.currentSlideInfo$)
   }
 
-  updateSlide() {
+  updateSlide(slideId?: number) {
     //TO-DO => update slide event emitter for next and prev while
     //slideshow is active
-    this.currentSlideInfo$ = this.gallery[this.slideIndex$];
+    this.slideIndex$ = slideId;
+    this.currentSlideInfo$ = this.gallery[slideId];
     this.slideEmitterEvent(this.currentSlideInfo$);
   }
 

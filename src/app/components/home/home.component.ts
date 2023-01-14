@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 // import { Artwork, galleria } from '../../artwork-data';
 import { BehaviorSubject, combineLatest, from, fromEvent, of, Subject } from 'rxjs';
@@ -11,24 +11,19 @@ import { SlideshowService } from 'src/app/services/slideshow.service';
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   /* observe slides/gallery */
   gallery: Artwork[] = [...this.slideshowService.gallery];
 
-
-  /* observe current slide */
-  private slideSelectedSubject = new Subject<number>();
-  slideSelectedAction$ = this.slideSelectedSubject.asObservable();
-
-  constructor(private slideshowService: SlideshowService, private router: Router) { }
+  constructor(private slideshowService: SlideshowService) { }
 
   ngOnInit(): void {
-    // TO-DO => remove
-    console.log(this.gallery)
 
   }
+
+  ngOnDestroy(): void {
+  }
   onSelectSlide(slideId: number) {
-    this.slideshowService.slideIndex$ = slideId;
-    this.slideshowService.updateSlide();
+    this.slideshowService.updateSlide(slideId);
   }
 }

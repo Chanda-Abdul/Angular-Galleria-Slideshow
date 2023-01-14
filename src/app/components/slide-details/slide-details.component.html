@@ -3,15 +3,15 @@
        src="{{currentSlideInfo$.images.hero.small}}"
        alt="{{currentSlideInfo$.name}}">
   <button class="expand"
-          (click)="viewExpandedImage()">
+          (click)="openLightboxImagePreview(this.currentSlideInfo$.images.hero.large)">
     <img src="../../../assets/icons/icon-view-image.svg"
          alt="">View Image</button>
 
-  <app-lightbox *ngIf="showImagePreview"
-                (close)="closeLightbox()"
+  <!-- <app-lightbox *ngIf="showImagePreview"
+                (close)="closeLightboxImagePreview()"
                 (showImagePreview)="showImagePreview"
-                [linkToImage]="this.currentSlideInfo$.images.hero.large"></app-lightbox>
-
+                ></app-lightbox> -->
+<ng-template appLightboxImagePreview ></ng-template>
   <div class="info">
     <div class="title">
       <h2>{{this.currentSlideInfo$.name}}</h2>

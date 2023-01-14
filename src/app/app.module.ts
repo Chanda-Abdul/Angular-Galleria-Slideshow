@@ -12,7 +12,7 @@ import { SlideshowComponent } from './components/slideshow/slideshow.component';
 import { LightboxComponent } from './components/lightbox/lightbox.component';
 import { SlideDetailsComponent } from './components/slide-details/slide-details.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ThumbnailDetailDirective } from './directives/thumbnail-detail-directive.directive';
+import { LightboxImagePreviewDirective } from './directives/lightbox-image-preview-directive.directive';
 import { SlideshowService } from './services/slideshow.service';
 
 
@@ -27,7 +27,7 @@ import { SlideshowService } from './services/slideshow.service';
     LightboxComponent,
     SlideDetailsComponent,
     PageNotFoundComponent,
-    ThumbnailDetailDirective
+    LightboxImagePreviewDirective
   ],
   imports: [
     BrowserModule,
@@ -39,6 +39,6 @@ import { SlideshowService } from './services/slideshow.service';
   providers: [SlideshowService],
   bootstrap: [AppComponent],
   // TO-DO => update for lightbox
-  // entryComponents: [LightboxComponent]
+  entryComponents: [LightboxComponent]
 })
 export class AppModule { }

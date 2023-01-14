@@ -1,4 +1,6 @@
 import { Component, ComponentFactoryResolver, OnDestroy, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { LightboxImagePreviewDirective } from 'src/app/directives/lightbox-image-preview-directive.directive';
 import { SlideshowService } from 'src/app/services/slideshow.service';
 import { LightboxComponent } from '../lightbox/lightbox.component';
 
@@ -9,45 +11,45 @@ import { LightboxComponent } from '../lightbox/lightbox.component';
 })
 
 export class SlideDetailsComponent implements OnInit, OnDestroy {
-
   currentSlideInfo$ = this.slideshowService.currentSlideInfo;
-  currentSlideSubscription;
+
+  private currentSlideSubscription;
+  private closeSubscription: Subscription;
+
+  @ViewChild(LightboxImagePreviewDirective) alertHost: LightboxImagePreviewDirective;
 
 
-  // @ViewChild('placeholder', { read: ViewContainerRef, static: true });
-
-  // public placeholder!: ViewContainerRef;
-  showImagePreview;
-  constructor(private slideshowService: SlideshowService, private resolver: ComponentFactoryResolver) { }
+  constructor(private slideshowService: SlideshowService, private componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngOnInit(): void {
-
-    // this.placehodler.clear();
-    // const componentFactory = this.resolver.resolveComponentFactory(LightboxComponent);
-    // const component = this.placehodler.createComponent(componentFactory)
-    // // console.log(this.slideshowService.slideIndex$)
     this.currentSlideSubscription =
       this.slideshowService.slideEmitter$.subscribe(
         () => {
           this.currentSlideInfo$ = this.slideshowService.currentSlideInfo$
-          // console.log(this.showImagePreview)
         })
   }
 
   ngOnDestroy(): void {
     this.currentSlideSubscription.unsubscribe();
+    if(this.closeSubscription){
+      this.closeSubscription.unsubscribe();
+    }
   }
 
-  viewExpandedImage() {
-    //  console.log(this.showImagePreview)
+  openLightboxImagePreview(currentImage: string) {
     //TO-DO => pause slide show
-    this.showImagePreview = true;
+    const lightboxComponentFactory = this.componentFactoryResolver.resolveComponentFactory(LightboxComponent);
 
-  }
+    const hostViewContainerRef = this.alertHost.viewContainerRef;
+    hostViewContainerRef.clear();
 
-  closeLightbox() {
-    this.showImagePreview = false;
+    const componentRef = hostViewContainerRef.createComponent(lightboxComponentFactory);
+
+    componentRef.instance.linkToImage = currentImage;
+    this.closeSubscription = componentRef.instance.close.subscribe(() => {
+      this.closeSubscription.unsubscribe();
+      hostViewContainerRef.clear();
+    });
   }
-  private exitLightboxPreview(){}
 
 }
