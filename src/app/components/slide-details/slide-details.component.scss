@@ -14,7 +14,7 @@
   position: relative;
   align-items: center;
   margin-bottom: 9rem;
-
+  transition: all .3s ease-out .45s;
   .mobile {
     width: 100%;
   }
@@ -85,7 +85,6 @@
 .year {
   position: absolute;
   color: variables.$bleached-silk;
-  opacity: .5;
   right: 0;
   top: -3rem;
 }

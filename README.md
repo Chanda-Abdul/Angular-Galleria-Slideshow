@@ -29,25 +29,65 @@ Users should be able to:
 - [x] See hover states for all interactive elements on the page
 - [x] Navigate the slideshow and view each painting in a lightbox
 
-<!-- - [ ] TO DO => Review CSS -->
 <!-- 
-- [ ]  router by /:id
+- [ ]  router by slide/:id/thumbnail
 - *Service
   - pause show
  -->
-<!-- - [ ] TO-DO => Deploy -->
+<!-- - [ ] TO-DO => Bugs
+- Why does slide one take so long?
+- start show from any slide besides index 0
+- fix loader
+ -->
 
 ## Screenshots
-### Mobile View @ `375px`
-<!-- ![](./screenshot.jpg) -->
-### Tablet View @ `768px`
-### Desktop View @ `1440px`
+
+
+<details>
+<summary><b> Mobile Screenshots @ 375px</b></summary>
+
+-  <b>Home - Main Gallery</b>
+<img src="src/assets/screens/home-gallery-mobile.png" width="375px"/>
+
+-  <b>Individual Slide during slideshow</b>
+<img src="src/assets/screens/home-slide-mobile.png" width="375px"/>
+
+-  <b>Individual Slide expanded into Lightbox</b>
+<img src="src/assets/screens/home-lightbox-mobile.png"  width="375px"/>
+
+</details>
+
+<details>
+<summary><b>Tablet View @ 768px </b></summary>
+
+-  <b>Home - Main Gallery</b>
+<img src="src/assets/screens/home-gallery-tablet.png" width="375px"/>
+
+-  <b>Individual Slide during slideshow</b>
+<img src="src/assets/screens/home-slide-tablet.png" width="375px"/>
+
+-  <b>Individual Slide expanded into Lightbox</b>
+<img src="src/assets/screens/home-lightbox-tablet.png"  width="375px"/>
+
+</details>
+<details>
+<summary><b>Desktop View @ 1440px</b></summary>
+
+-  <b>Home - Main Gallery</b>
+<img src="src/assets/screens/home-gallery-desktop.png" width="375px"/>
+
+-  <b>Individual Slide during slideshow</b>
+<img src="src/assets/screens/home-slide-desktop.png" width="375px"/>
+
+-  <b>Individual Slide expanded into Lightbox</b>
+<img src="src/assets/screens/home-lightbox-desktop.png"  width="375px"/>
+
+
+</details>
 
 ## Links
 - Solution URL: [Click for Solution](https://github.com/Chanda-Abdul/Angular-Galleria-Slideshow)
-- Live Site URL: 
-<!-- 
-[Click for Live Site](https://your-live-site-url.com) -->
+- Live Site URL:[Click for Live Site](https://legendary-maamoul-0b4a74.netlify.app/)
 
 ## My process
 - basic structure, components
@@ -137,6 +177,7 @@ const proudOfThisFunc = () => {
 
 ➕ <b> Animations</b>
 <!-- - [ ] Add Cool Animations -->
+<!-- https://www.sliderrevolution.com/resources/css-slideshow/ -->
 <!-- // On click
 // Navigate to: "Desktop - Gallery 1";
 // Animate: Dissolve;

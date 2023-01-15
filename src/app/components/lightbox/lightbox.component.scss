@@ -1,91 +1,112 @@
 @use '/src/variables';
 
-.backdrop {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 500%;
-	overflow: hidden;
-	height: 100vh;
-	filter: grayscale(95%);
-	z-index: 4;
-	img {
-	z-index: 3;
-	object-fit: cover;
-	object-position: 0 0;
-	min-width: 100%;
-	height: 100vh;
-	opacity: .9;
-	}
-}
-.overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background: rgba(0, 0, 0, 0.75);
-	z-index: 5;
-}
+.overlay,
+.backdrop,
 .alert-box {
-	position: absolute;
-	top: 0;
-	left: 0;
-	@include variables.flex-column;
-	justify-content: flex-start;
-	align-items: center;
-	z-index: 6;
-	width: 100%;
-	height: 100vh;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
 }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  filter: grayscale(95%);
+  z-index: 4;
+
+  img {
+    z-index: 3;
+    object-fit: cover;
+    object-position: 0 0;
+    opacity: .9;width: 500%;
+    // width: 100%;
+    // height: 100%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 5;
+}
+
+.alert-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+    z-index: 6;
+    width: 100vw;
+  height: 100vh;
+  @include variables.flex-column;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
 .btn-close {
-	@include variables.subheading-secondary;
-	width: 100%;
-	background: transparent;
-	color: variables.$granulated-sugar;
-	font-size: 14px;
-	letter-spacing: 3px;
-	font-weight: 700;
-	text-align: right;
-	padding-right: 0;
-	margin-bottom: 1rem;
+  @include variables.subheading-secondary;
+  background: transparent;
+  color: variables.$granulated-sugar;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-align: right;
+  padding-right: 0;
+  margin-bottom: 1rem;
 }
+
 .preview {
-	width: 100%;
+  width: 100%;
 }
+
 @media screen and (min-width: 768px) {
-	.backdrop {
-	background-color: variables.$black-hole;
-	opacity: .65;
-	img {
-	display: none;
-	}
-	}
-	.alert-box {
-	@include variables.flex-column;
-	// flex-direction: column-reverse;
-	text-align: right;
-	}
-	.preview {
-	margin-top: 0;
-	width: 47.75rem;
-	}
-	.alert-box-actions {
-	width: 47.75rem;
-	align-items: flex-end;
-	}
+  .backdrop {
+    background-color: variables.$black-hole;
+    opacity: .65;
+
+    img {
+      display: none;
+    }
+  }
+
+  .alert-box {
+    text-align: right;
+  }
+
+  .preview {
+    margin-top: 0;
+    width: 47.75rem;
+  }
+
+  .alert-box-actions {
+    width: 47.75rem;
+    align-items: flex-end;
+  }
 }
+
 @media screen and (min-width: 1220px) {
-	.alert-box {
-	width: 100vw;
-	height: 100%;
-	top: 0;
-	left: 0;
-	}
-	.preview,.alert-box-actions {
-	width: 65.5rem;
-	}
-	.btn-close {
-	margin-bottom: 3rem;
-	}
+  .preview,
+  .alert-box-actions {
+    width: 65.5rem;
+  }
+
+  .btn-close {
+    margin-bottom: 3rem;
+  }
+
+  .overlay {
+
+    width: 100vw;
+    height: 100vh;
+
+  }
 }
