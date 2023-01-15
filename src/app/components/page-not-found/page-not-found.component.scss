@@ -1,0 +1,21 @@
+  @use '/src/variables';
+
+  .container {
+    height: 90vh;
+    margin: 5rem auto;
+    @include variables.flex-column;
+
+    * {
+      padding: 2rem;
+    }
+  }
+
+  h4 {
+    color: darkred;
+  }
+
+  .btn-error {
+    color: variables.$aged-moustache-grey;
+    border: 1px solid darkred;
+    border-radius: 2rem;
+  }

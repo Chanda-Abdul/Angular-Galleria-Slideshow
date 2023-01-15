@@ -5,5 +5,4 @@ import { Directive, ViewContainerRef } from '@angular/core';
 })
 export class LightboxImagePreviewDirective {
   constructor(public viewContainerRef: ViewContainerRef) { }
-  // TO-DO => add lightbox functionality
 }

@@ -3,63 +3,53 @@
 
 $global-font: 'Libre Baskerville', serif;
 
-
 /* Color Palette */
 $black-hole: hsl(0, 0%, 0%);
 $aged-moustache-grey: hsl(0, 0%, 49%);
 $cold-morning: hsl(0, 0%, 90%);
-$bleached-silk: hsl(0, 0%, 95%);
+$bleached-silk: hsl(0, 0%, 95%, 1);
 $granulated-sugar: hsl(0, 0%, 100%);
+$night-in-manchester: hsl(229, 53%, 41%);
 
 /* Typography */
 @mixin display-type {
-  color: $aged-moustache-grey;
+  color: $cold-morning;
   font-weight: 700;
-  font-size: 200px;
+  font-size: 14.25px;
   line-height: 150px;
 }
+
 @mixin heading-l {
-  font-family: $global-font;
-  color: $black-hole;
   font-weight: 700;
   font-size: 56px;
   line-height: 64px;
 }
 
 @mixin heading-m {
-  font-family: $global-font;
-  color: $black-hole;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
 }
 
 @mixin heading-s {
-  font-family: $global-font;
-  color: $black-hole;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
 }
 
 @mixin subheading-primary {
-  font-family: $global-font;
-  color: $black-hole;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 15px;
   line-height: 19px;
 }
 
 @mixin subheading-secondary {
-  font-family: $global-font;
-  color: $black-hole;
   font-weight: 400;
   font-size: 13px;
   line-height: 17px;
 }
 
 @mixin link-primary {
-  font-family: $global-font;
   color: $aged-moustache-grey;
   font-weight: 700;
   font-size: 12px;
@@ -69,20 +59,18 @@ $granulated-sugar: hsl(0, 0%, 100%);
 }
 
 @mixin link-secondary {
-  font-family: $global-font;
   color: $aged-moustache-grey;
   font-weight: 700;
   font-size: 9px;
   line-height: 11px;
   letter-spacing: 2px;
   text-decoration: underline;
+
 }
 
 @mixin body-type {
-  font-family: $global-font;
   color: $aged-moustache-grey;
   font-weight: 700;
-  font-size: 14px;
   line-height: 28px;
 }
 
@@ -100,9 +88,3 @@ $granulated-sugar: hsl(0, 0%, 100%);
   justify-content: space-between;
   align-items: center;
 }
-
-
-
-
-
-

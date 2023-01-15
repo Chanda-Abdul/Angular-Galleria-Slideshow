@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'slideshow', component: SlideshowComponent,
     children: [
-      // TO-DO => update lightbox routing
+      // TO-DO *extra* => update lightbox routing with slide ids?
       { path: 'lightbox', component: LightboxComponent }
 
     ]
@@ -21,12 +21,12 @@ const routes: Routes = [
   },
   /* wildcard route */
   {
-    path: 'not-found', component: PageNotFoundComponent,
+    path: '**', component: PageNotFoundComponent,
     data: {
       message: 'Page not found!'
     }
   },
-  { path: '**', redirectTo: '' }
+  // { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

@@ -1,15 +1,13 @@
-<!-- TO-Do => add loader -->
-<div *ngIf="gallery">
-  <section class="content">
-
+<div class="content">
+  <mat-spinner *ngIf="!galleryLoaded"></mat-spinner>
+  <section *ngIf="gallery$ && galleryLoaded">
     <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
       <li class="mdc-image-list__item"
-          *ngFor="let artwork of gallery"
+          *ngFor="let artwork of gallery$"
           [routerLink]="['/slide', artwork.id]"
           routerLinkActive="active"
           ariaCurrentWhenActive="page"
           (click)="onSelectSlide(artwork.id)">
-
         <img class="mdc-image-list__image"
              [src]="artwork.images.gallery"
              [alt]="artwork.name">
@@ -18,13 +16,20 @@
           <span class="info mdc-image-list__label">
             <p>{{artwork.name}} </p>
             <a>{{artwork.artist.name}}</a>
-
           </span>
         </div>
-
       </li>
-
     </ul>
   </section>
-
 </div>
+<footer>
+  <div class="attribution">
+    Challenge by
+    <a href='https://www.frontendmentor.io/'
+       target='_blank'
+       rel='noreferrer'>
+      Frontend Mentor
+    </a>
+    . Coded by <a href='https://www.ChandaCodes.com'> Chanda Abdul</a>.
+  </div>
+</footer>

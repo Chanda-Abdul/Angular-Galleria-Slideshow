@@ -1,25 +1,22 @@
 @use '/src/variables';
 
-.container {
-  position:static;
-  bottom:0;
-  width: 100%;
-}
-
 .bottom-nav {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100%;
 }
 
 .nav-row {
   @include variables.flex-row;
-  padding: 10px 25px;
-  height: 72px;
+  height: 5.25rem;
+  padding: .5rem 1.75rem;
 }
 
 .nav-info {
-  max-width: 235px;
+  max-width: 100%;
+  height: 2rem;
+  margin: auto 1rem;
 }
 
 button {
@@ -36,29 +33,14 @@ button:hover svg {
 }
 
 button:disabled>svg {
-
   stroke: variables.$cold-morning;
 }
 
 .title-info {
   @include variables.flex-column;
-  height: 39px;
+  height: 100%;
+  justify-content: space-evenly;
   align-items: flex-start;
-}
-
-.title-info h5 {
-  @include variables.body-type;
-  color: variables.$black-hole;
-  margin-bottom: 5px;
-}
-
-.title-info h6 {
-  @include variables.body-type;
-  color: variables.$black-hole;
-  opacity: 0.75;
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 12px;
 }
 
 .nav {
@@ -66,39 +48,20 @@ button:disabled>svg {
   width: 76px;
 }
 
-.attribution {
-  width: 100vw;
-  margin: 5px;
-  position: static;
-  bottom: 0;
-  font-size: 11px;
-  text-align: center;
-}
-
-a {
-  color: hsl(228, 45%, 44%);
-  font-size: 11px;
-}
-
 @media screen and (min-width: 768px) {
   .nav-row {
-    padding: auto 40px;
-    height: 96px;
+    height: 6.85rem;
+    padding: auto 3rem;
   }
 
-  .title-info h5 {
-    @include variables.heading-s;
-    margin-bottom: 10px;
+  .title-info {
+    height: 100%;
+    margin-left: 3rem;
   }
 
-  .title-info h6 {
-    @include variables.subheading-secondary;
-    opacity: 0.75;
-  }
-}
-
-@media screen and (min-width: 1175px) {
-  .attribution {
-    text-align: center;
+  .nav {
+    height: 100%;
+    width: 91px;
+    margin-right: 3rem;
   }
 }

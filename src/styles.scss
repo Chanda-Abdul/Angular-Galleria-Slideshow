@@ -1,60 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
 @use './variables.scss';
 @use "@material/image-list/mdc-image-list";
-// @use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-// @include mat.core();
-
-// // Define the palettes for your theme using the Material Design palettes available in palette.scss
-// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// // hue. Available color palettes: https://material.io/design/color/
-// $angular-galleria-slideshow-site-primary: mat.define-palette(mat.$indigo-palette);
-// $angular-galleria-slideshow-site-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// // The warn palette is optional (defaults to red).
-// $angular-galleria-slideshow-site-warn: mat.define-palette(mat.$red-palette);
-
-// // Create the theme object. A theme consists of configurations for individual
-// // theming systems such as "color" or "typography".
-// $angular-galleria-slideshow-site-theme: mat.define-light-theme((
-//   color: (
-//     primary: $angular-galleria-slideshow-site-primary,
-//     accent: $angular-galleria-slideshow-site-accent,
-//     warn: $angular-galleria-slideshow-site-warn,
-//   )
-// ));
-
-// // Include theme styles for core and each component used in your app.
-// // Alternatively, you can import and @include the theme mixins for each component
-// // that you are using.
-// @include mat.all-component-themes($angular-galleria-slideshow-site-theme);
-
-
-
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: variables.$global-font;
+  transition: all 0.5s ease-in-out;
 }
 
 html,
 body {
-// height: 100vh;
-// width: 100vw;
-  font-family: variables.$global-font;
+  color: variables.$black-hole;
+  font-size: 14px;
   background-color: variables.$granulated-sugar;
-  // .container{
- 
-    // height: 100%;
-  // }
+  width: 100vw;
+  height: 100vh;
 }
-
-
 
 button {
   @include variables.link-secondary;
@@ -64,29 +26,105 @@ button {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  padding: 25px 10px;
+  padding: 1.75rem .75rem;
 }
 
 button:hover {
   color: variables.$black-hole;
+
+  &:enabled {
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9);
+  }
+}
+
+p {
+  @include variables.body-type;
+  color: variables.$aged-moustache-grey;
+}
+
+h2 {
+  @include variables.heading-m;
+}
+
+h3 {
+  @include variables.subheading-primary;
+  color: variables.$aged-moustache-grey;
+}
+
+h4 {
+  @include variables.display-type;
+  font-size: 100px;
+}
+
+h5 {
+  @include variables.subheading-secondary;
+  color: variables.$black-hole;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+h6 {
+  @include variables.subheading-secondary;
+  color: variables.$black-hole;
+  opacity: 0.75;
+  font-size: 0.75rem;
+  line-height: 0.9rem;
 }
 
 a {
   @include variables.link-secondary;
 }
 
-// html, body { height: 100%; }
+footer {
+  position: static;
+  bottom: 0;
+  width: 100vw;
+}
 
+.mat-progress-bar {
+  * {
+    height: 2px !important;
+  }
+}
 
 .mat-progress-bar-fill::after {
-  background-color: variables.$aged-moustache-grey;
+  background-color: variables.$black-hole;
 }
 
- .mat-progress-bar-buffer {
-  background:variables.$bleached-silk;
+.mat-progress-bar-buffer {
+  background: variables.$bleached-silk;
 }
 
-//  .mat-progress-bar {
-// //  border-radius: 2px;
-// }
+.mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: variables.$black-hole;
+}
 
+@media screen and (min-width: 768px) {
+  h2 {
+    @include variables.heading-l;
+  }
+
+  h4 {
+    @include variables.display-type;
+    font-size: 14.1.75rem;
+  }
+
+  h5 {
+    @include variables.heading-s;
+  }
+
+  h6 {
+    @include variables.subheading-secondary;
+    color: variables.$black-hole;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  button {
+    @include variables.link-primary;
+    padding: 0;
+  }
+}

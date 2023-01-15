@@ -31,7 +31,7 @@ export class SlideDetailsComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.currentSlideSubscription.unsubscribe();
-    if(this.closeSubscription){
+    if (this.closeSubscription) {
       this.closeSubscription.unsubscribe();
     }
   }

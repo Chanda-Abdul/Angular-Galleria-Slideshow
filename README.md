@@ -23,20 +23,17 @@ This is a solution to the [Galleria slideshow site challenge on Frontend Mentor]
 
 Users should be able to:
 - [x] View the optimal layout for the app depending on their device's screen size
-<!-- - [ ] TO DO => Review CSS -->
   - [x] Mobile @ <b>375px</b>
   - [x] Tablet @  <b>768px</b>
   - [x] Desktop @ <b>1440px</b>
 - [x] See hover states for all interactive elements on the page
 - [x] Navigate the slideshow and view each painting in a lightbox
-<!-- * Dynamic Component for this * -->
+
+<!-- - [ ] TO DO => Review CSS -->
 <!-- 
 - [ ]  router by /:id
-
-- *Service*
-
+- *Service
   - pause show
-
  -->
 <!-- - [ ] TO-DO => Deploy -->
 
@@ -53,7 +50,12 @@ Users should be able to:
 [Click for Live Site](https://your-live-site-url.com) -->
 
 ## My process
-...
+- basic structure, components
+- basic css
+- functionality
+- polish css
+- fix bugs
+- deploy
 ### Project Structure
 
 - `/` Home Component
@@ -69,8 +71,8 @@ Users should be able to:
 ### Built with
 
 
-- <b>[Angular](https://angular.io/)</b> (<b>JavaScript</b> framework)
-  - [<b>RxJs</b>(Reactive Extensions for JavaScript)](https://rxjs.dev/guide/overview) -  a library for composing async and event-based programs by using observable sequences(think of <b>RxJS</b> as <b>[Lodash](https://lodash.com/)</b> for events.) 
+- <b>[Angular](https://angular.io/)</b> (JavaScript framework)
+  - [RxJs(Reactive Extensions for JavaScript)](https://rxjs.dev/guide/overview) -  a library for composing async and event-based programs by using observable sequences(think of <b>RxJS</b> as <b>[Lodash](https://lodash.com/)</b> for events.) 
     - [Observables
 ]() 
   - [Routing]() 
@@ -80,8 +82,8 @@ Users should be able to:
       - [Image lists
 ](https://m2.material.io/components/image-lists#types) - display a collection of images in an organized grid. Image list was used to create the Masonry layout
       - [Progress bar](https://material.angular.io/components/progress-bar/overview) - a horizontal progress-bar for indicating progress and activity.
-- [TypeScript](https://www.typescriptlang.org/)
-- [JavaScript](https://www.javascript.com/)
+- <b>[TypeScript](https://www.typescriptlang.org/)</b>
+- <b>[JavaScript](https://www.javascript.com/)</b>
 - <b>[Figma](https://www.figma.com/)</b> collaborative web application for interface design.
 - <b>[Sass](https://sass-lang.com/)/CSS</b> custom properties
   - Mobile-first workflow
@@ -99,9 +101,9 @@ Users should be able to:
     - Subject
     - Subscriptions
     - `.pipe()`
-    - `take()`
-    - `takeUntil()`
-    - `interval()`
+    - `.take()`
+    - `.takeUntil()`
+    - `.interval()`
 <!-- ```js
 const proudOfThisFunc = () => {
   console.log("🎉");

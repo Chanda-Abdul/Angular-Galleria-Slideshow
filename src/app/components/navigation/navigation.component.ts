@@ -8,20 +8,22 @@ import { SlideshowService } from 'src/app/services/slideshow.service';
 })
 export class NavigationComponent implements OnInit {
 
-  showStarted$ = false;
+  showStarted$ = this.slideshowService.showStatus;
   showStatusSubscription;
 
   constructor(private slideshowService: SlideshowService) { }
 
   ngOnInit(): void {
+    this.showStatusSubscription = this.slideshowService.slideEmitter$.subscribe(() => {
+      this.showStarted$ = this.slideshowService.showStatus;
+    })
   }
 
   startSlideShow() {
-    
     this.slideshowService.startSlideshow(this.slideshowService.currentSlideIndex);
-    console.log(this.slideshowService.currentSlideIndex)
     this.showStarted$ = this.slideshowService.showStatus;
   }
+  
   endSlideShow() {
     this.slideshowService.endSlideshow()
     this.showStarted$ = this.slideshowService.showStatus;

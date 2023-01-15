@@ -1,97 +1,85 @@
 @use '/src/variables';
 @use '~@material/image-list';
-
 .content {
-  @include variables.flex-column;
-  margin: 1em auto;
+	@include variables.flex-column;
+	margin: 1em auto;
 }
-
 .my-masonry-image-list {
-  @include image-list.masonry-columns(1, 1em);
+	@include image-list.masonry-columns(1, 1em);
 }
-
 img {
-  width: 327px;
-  position: relative;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.21);
-  cursor: zoom-in;
+	width: 24rem;
+	position: relative;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.21);
+	cursor: zoom-in;
 }
-
 .overlay {
-  position: absolute;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.841672) 100%);
-  height: 170px;
-  width: 100%;
-  left: 0;
-  bottom: 10px;
-
+	position: absolute;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.841672) 100%);
+	height: 12rem;
+	width: 100%;
+	left: 0;
+	bottom: .75rem;
 }
-
-
-
-.lightbox {}
-
 .info {
-  position: absolute;
-  max-height: 83px;
-  left: 25px;
-  bottom: 25px;
-  color: variables.$granulated-sugar;
-  margin-bottom: 10px;
+	position: absolute;
+	max-height: 83px;
+	left: 1.75rem;
+	bottom: 1.75rem;
+	color: variables.$granulated-sugar;
+	margin-bottom: .75rem;
 }
-
 p {
-  @include variables.heading-m;
-  color: variables.$granulated-sugar;
-  width: 246px;
-  white-space: initial;
+	@include variables.heading-m;
+	color: variables.$granulated-sugar;
+	width: 246px;
+	white-space: initial;
 }
-
-
 a {
-  @include variables.link-secondary;
-  color: variables.$granulated-sugar;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  opacity: 75%;
-  text-decoration: none;
+	@include variables.link-secondary;
+	color: variables.$granulated-sugar;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 16px;
+	opacity: 75%;
+	text-decoration: none;
 }
-
-img {
-  width: 100%;
-}
-
-
 /* Responsive Styles */
 @media screen and (min-width: 620px) {
-  .my-masonry-image-list {
-    @include image-list.masonry-columns(2, 1.5em);
-  }
-
-  img {
-
-    width: 324px;
-  }
-
+	.content {
+	margin: 2rem;
+	}
+	.my-masonry-image-list {
+	@include image-list.masonry-columns(2, 2rem);
+	}
 }
-
 @media screen and (min-width: 950px) {
-  .my-masonry-image-list {
-    @include image-list.masonry-columns(3, 2em);
-  }
-
-  img {
-
-    width: 310px;
-  }
-
+	.my-masonry-image-list {
+	@include image-list.masonry-columns(3, 2em);
+	}
 }
-
 @media screen and (min-width: 1440px) {
-  .my-masonry-image-list {
-    @include image-list.masonry-columns(4, 1.5em);
-  }
-
-
+	.content {
+	margin: 2.75rem;
+	}
+	.my-masonry-image-list {
+	@include image-list.masonry-columns(4, 2em);
+	}
+}
+.attribution {
+	font-size: .75rem;
+	@include variables.subheading-secondary;
+	margin: 5px;
+	text-align: center;
+	img {
+	width: 22rem;
+	position: relative;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.21);
+	cursor: zoom-in;
+	}
+	a {
+	color: variables.$night-in-manchester;
+	font-size: .75rem;
+	letter-spacing: normal;
+	}
 }

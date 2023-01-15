@@ -1,33 +1,39 @@
-<div  class="container" *ngIf="currentSlideInfo$">
-  <img class="hero"
-       src="{{currentSlideInfo$.images.hero.small}}"
-       alt="{{currentSlideInfo$.name}}">
-  <button class="expand"
-          (click)="openLightboxImagePreview(this.currentSlideInfo$.images.hero.large)">
-    <img src="../../../assets/icons/icon-view-image.svg"
-         alt="">View Image</button>
+<div *ngIf="currentSlideInfo$">
+  <div class="container">
 
-  <!-- <app-lightbox *ngIf="showImagePreview"
-                (close)="closeLightboxImagePreview()"
-                (showImagePreview)="showImagePreview"
-                ></app-lightbox> -->
-<ng-template appLightboxImagePreview ></ng-template>
-  <div class="info">
-    <div class="title">
-      <h2>{{this.currentSlideInfo$.name}}</h2>
-      <h3>{{this.currentSlideInfo$.artist.name}}</h3>
+    <div class="hero">
+      <img class="mobile"
+           src="{{currentSlideInfo$.images.hero.small}}"
+           alt="{{currentSlideInfo$.name}}">
+      <img class="desktop"
+           src="{{currentSlideInfo$.images.hero.large}}"
+           alt="{{currentSlideInfo$.name}}">
+      <button class="expand"
+              (click)="openLightboxImagePreview(this.currentSlideInfo$.images.thumbnail)">
+        <img src="../../../assets/icons/icon-view-image.svg"
+             alt="">View Image</button>
+      <ng-template appLightboxImagePreview></ng-template>
+
+      <div class="info">
+        <div class="title">
+          <h2>{{this.currentSlideInfo$.name}}</h2>
+          <h3>{{this.currentSlideInfo$.artist.name}}</h3>
+        </div>
+        <img class="artist-thumbnail"
+             src="{{this.currentSlideInfo$.artist.image}}"
+             alt="{{this.currentSlideInfo$.artist.name}}">
+      </div>
     </div>
-  </div>
 
-  <div class="description">
-    <img class="artist-thumbnail"
-         src="{{this.currentSlideInfo$.artist.image}}"
-         alt="{{this.currentSlideInfo$.artist.name}}">
-    <h4 class="year">{{this.currentSlideInfo$.year}}</h4>
-    <p class="text">{{this.currentSlideInfo$.description}}</p>
-    <a class="source"
-       href="{{this.currentSlideInfo$.source}}"
-       target="_blank">Go to Source</a>
+    <div class="description">
+      <h4 class="year">{{this.currentSlideInfo$.year}}</h4>
+      <div class="text">
+        <p>{{this.currentSlideInfo$.description}}</p>
+        <a class="source"
+           href="{{this.currentSlideInfo$.source}}"
+           target="_blank">Go to Source</a>
+      </div>
+    </div>
   </div>
 
   <app-footer></app-footer>

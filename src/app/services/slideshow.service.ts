@@ -36,6 +36,13 @@ export class SlideshowService {
     return this.showStarted$;
   }
 
+  /* slideshow progression */
+  slideshowProgress$: number = 0;
+
+  get slideshowProgress() {
+    return this.slideshowProgress$;
+  }
+
   slideEmitter$ = new Subject<Artwork>();
 
   slideEmitterEvent(data: Artwork) {
@@ -43,7 +50,6 @@ export class SlideshowService {
   }
 
   slideEmitterSubscription;
-
 
   constructor() { }
 
@@ -58,9 +64,10 @@ export class SlideshowService {
           //To-Do => how to set next interval to number other than 0
           this.showStarted$;
           this.slideIndex$ = startingSlideIndex;
+          this.slideshowProgress$ = ((this.slideIndex$ + 1) / this.gallery.length) * 100
           this.currentSlideInfo$ = this.gallery[this.slideIndex$];
           this.slideEmitterEvent(this.currentSlideInfo$);
-          if(this.slideIndex$ === this.gallery.length-1){
+          if (this.slideIndex$ === this.gallery.length - 1) {
             this.endSlideshow();
           }
         },
@@ -69,7 +76,7 @@ export class SlideshowService {
         },
         complete: () => {
 
-          }
+        }
       });
   }
 
@@ -87,7 +94,6 @@ export class SlideshowService {
       this.slideIndex$ = this.gallery.length - 1;
     }
     this.updateSlide(this.slideIndex$);
-    // this.slideEmitterEvent(this.currentSlideInfo$)
   }
 
   setNextSlide() {
@@ -97,7 +103,6 @@ export class SlideshowService {
       this.slideIndex$ = 0;
     }
     this.updateSlide(this.slideIndex$);
-    // this.slideEmitterEvent(this.currentSlideInfo$)
   }
 
   updateSlide(slideId?: number) {
@@ -105,6 +110,7 @@ export class SlideshowService {
     //slideshow is active
     this.slideIndex$ = slideId;
     this.currentSlideInfo$ = this.gallery[slideId];
+    this.slideshowProgress$ = ((this.slideIndex$ + 1) / this.gallery.length) * 100
     this.slideEmitterEvent(this.currentSlideInfo$);
   }
 

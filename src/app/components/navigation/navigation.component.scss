@@ -1,36 +1,40 @@
 @use '/src/variables';
-
-
 .nav {
-  @include variables.flex-row;
-  height: 80px;
-  width: 100%;
-
-  // justify-content: space-evenly;
-
-  // width: 100vw;
-
-
-  margin: 0 1em;
-  padding: 0 1em;
-  // border-width: 90%;
+	@include variables.flex-row;
+	height: 5.75rem;
+	width: 100%;
+	margin: 0 1em;
+	padding: 0 1em;
 }
-
 .logo {
-  height: 32px;
-  width: 113px;
-
+	height: 32px;
+	width: 113px;
 }
-
 button {
-  height: 11px;
-  width: 175px;
-  margin-right: 0;
+	height: 11px;
+	width: 175px;
+	margin-right: 0;
+}
+hr {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 1px solid variables.$cold-morning;
+}
+@media screen and (min-width: 768px) {
+	.nav {
+	height: 6.25rem;
+	padding: 0 2rem;
+	}
+}
+@media screen and (min-width: 1440px) {
+	.nav {
+	height: 9rem;
+	padding: 0 2.75rem;
+	}
+	.logo {
+	height: 3.5rem;
+	width: 12rem;
+	}
 }
 
-hr {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  border: 1px solid variables.$cold-morning;
-}
