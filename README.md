@@ -213,9 +213,9 @@ service, get more art?
 
 
 ## Useful resources
-- [What is Observable | Observables | Angular 12+](https://youtu.be/V4iMyVnQPqM) 📽 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Unsubscribe to an Observable | Observables | Angular 12+](https://youtu.be/8j5kvLddNwM) 📽 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Flexbox or grid - How to decide?](https://youtu.be/3elGSZSWTbM) 📽 - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [<img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube icon" /> What is Observable | Observables | Angular 12+](https://youtu.be/V4iMyVnQPqM) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [<img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube icon" /> Unsubscribe to an Observable | Observables | Angular 12+](https://youtu.be/8j5kvLddNwM) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [<img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube icon" /> Flexbox or grid - How to decide?](https://youtu.be/3elGSZSWTbM)  - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [<img src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white" alt="Material UI icon"/> Material Design Image Lists for Masonry Layout](https://material.io/components/image-lists) 💁🏽‍♀️ 🧱 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [<img src="https://img.shields.io/badge/Pluralsight-F15B2A?style=for-the-badge&logo=Pluralsight&logoColor=white" alt="pluralsight icon"/> RxJS in Angular: Reactive Development
 by Deborah Kurata ](https://www.pluralsight.com/courses/rxjs-angular-reactive-development) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
