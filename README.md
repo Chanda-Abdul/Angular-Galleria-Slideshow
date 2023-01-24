@@ -48,9 +48,11 @@ Users should be able to:
 
 -  <b>Home - Main Gallery</b>
 <img src="src/assets/screens/home-gallery-mobile.png" width="375px"/>
+<hr>
 
 -  <b>Individual Slide during slideshow</b>
 <img src="src/assets/screens/home-slide-mobile.png" width="375px"/>
+<hr>
 
 -  <b>Individual Slide expanded into Lightbox</b>
 <img src="src/assets/screens/home-lightbox-mobile.png"  width="375px"/>
@@ -62,9 +64,11 @@ Users should be able to:
 
 -  <b>Home - Main Gallery</b>
 <img src="src/assets/screens/home-gallery-tablet.png" width="375px"/>
+<hr>
 
 -  <b>Individual Slide during slideshow</b>
 <img src="src/assets/screens/home-slide-tablet.png" width="375px"/>
+<hr>
 
 -  <b>Individual Slide expanded into Lightbox</b>
 <img src="src/assets/screens/home-lightbox-tablet.png"  width="375px"/>
@@ -75,9 +79,11 @@ Users should be able to:
 
 -  <b>Home - Main Gallery</b>
 <img src="src/assets/screens/home-gallery-desktop.png" width="375px"/>
+<hr>
 
 -  <b>Individual Slide during slideshow</b>
 <img src="src/assets/screens/home-slide-desktop.png" width="375px"/>
+<hr>
 
 -  <b>Individual Slide expanded into Lightbox</b>
 <img src="src/assets/screens/home-lightbox-desktop.png"  width="375px"/>
@@ -98,39 +104,44 @@ Users should be able to:
 - deploy
 ### Project Structure
 
-- `/` Home Component
+- `/` `Home` Component
   - masonry gallery view of all available images for slideshow
-- `/slide/:id` SlideDetail Component
+- `/slide/:id` `SlideDetails` Component
   - select one image from gallery view to see slide details, but slideshow does not start
-- `/slideshow` Slideshow Component
-  - SlideDetail Component, starting with first slide
+- `/slideshow` `Slideshow` Component
+  - `SlideDetails` Component, starting with first slide
 - `/slideshow/:id` || `/lightbox`Slideshow Component
-  - SlideDetail Component, starting with slide `:id`
+  - `SlideDetails` Component, starting with slide `:id`
 
 ### Approach
 ### Built with
 
 
-- <b>[Angular](https://angular.io/)</b> (JavaScript framework)
+
+[<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular icon" height="30" />](https://angular.io/) 
   - [RxJs(Reactive Extensions for JavaScript)](https://rxjs.dev/guide/overview) -  a library for composing async and event-based programs by using observable sequences(think of <b>RxJS</b> as <b>[Lodash](https://lodash.com/)</b> for events.) 
     - [Observables
 ]() 
   - [Routing]() 
   - [Dynamic Components](https://angular.io/guide/dynamic-component-loader) 
   - [Services](https://angular.io/guide/creating-injectable-service) 
-   - [Angular Material](https://material.angular.io/) 
-      - [Image lists
-](https://m2.material.io/components/image-lists#types) - display a collection of images in an organized grid. Image list was used to create the Masonry layout
-      - [Progress bar](https://material.angular.io/components/progress-bar/overview) - a horizontal progress-bar for indicating progress and activity.
-- <b>[TypeScript](https://www.typescriptlang.org/)</b>
-- <b>[JavaScript](https://www.javascript.com/)</b>
-- <b>[Figma](https://www.figma.com/)</b> collaborative web application for interface design.
-- <b>[Sass](https://sass-lang.com/)/CSS</b> custom properties
-  - Mobile-first workflow
-  - Flexbox
-  - CSS Grid
-- Semantic <b>HTML5</b> markup
 
+[<img src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white" alt="Material UI icon" height="30" />](https://material.angular.io/) 
+  - [Image lists
+](https://m2.material.io/components/image-lists#types) - display a collection of images in an organized grid. Image list was used to create the Masonry layout
+  - [Progress bar](https://material.angular.io/components/progress-bar/overview) - a horizontal progress-bar for indicating progress and activity.
+
+
+[<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript icon" height="30" />](https://www.typescriptlang.org/)
+[<img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript icon" height="30" />](https://www.javascript.com/)
+[<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma icon" height="30" />](https://www.figma.com/) 
+[<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass icon" height="30" />](https://sass-lang.com/)<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" height="30" /> 
+- Mobile-first workflow
+- Flexbox
+- CSS Grid
+
+[<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML icon" height="30" /> ]()
+[<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify icon" height="30" />]()
 
 ## What I learned
 <!-- Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
@@ -152,7 +163,7 @@ const proudOfThisFunc = () => {
 - Masonry Layouts 🤦🏽‍♀️
   - [Angular Material Image lists
 ](https://m2.material.io/components/image-lists#types) - Image lists display a collection of images in an organized grid. Image list was used to create Masonry layout
-- using `get()`
+- using `get()`ers
 <!-- ```html
 <h1>Some HTML code I'm proud of</h1>
 ``` -->
@@ -203,11 +214,11 @@ service, get more art?
 - [What is Observable | Observables | Angular 12+](https://youtu.be/V4iMyVnQPqM) 📽 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [Unsubscribe to an Observable | Observables | Angular 12+](https://youtu.be/8j5kvLddNwM) 📽 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [Flexbox or grid - How to decide?](https://youtu.be/3elGSZSWTbM) 📽 - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Material Design Image Lists for Masonry Layout](https://material.io/components/image-lists) 💁🏽‍♀️ 🧱 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [RxJS in Angular: Reactive Development
-by Deborah Kurata (PluralSight Course)](https://www.pluralsight.com/courses/rxjs-angular-reactive-development) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [<img src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white" alt="Material UI icon"/> Material Design Image Lists for Masonry Layout](https://material.io/components/image-lists) 💁🏽‍♀️ 🧱 - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [<img src="https://img.shields.io/badge/Pluralsight-F15B2A?style=for-the-badge&logo=Pluralsight&logoColor=white" alt="pluralsight icon"/> RxJS in Angular: Reactive Development
+by Deborah Kurata ](https://www.pluralsight.com/courses/rxjs-angular-reactive-development) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Learn RxJs](https://www.learnrxjs.io/) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-- [Angular - The Complete Guide (2023 Edition) by Maximilian Schwarzmüller (Udemy Course) => Dynamic Components
+- [<img src="https://img.shields.io/badge/Udemy-EC5252?style=for-the-badge&logo=Udemy&logoColor=white" alt="Udemy icon" height="30" /> Angular - The Complete Guide (2023 Edition) by Maximilian Schwarzmüller  => Dynamic Components
 ](https://www.udemy.com/course/the-complete-guide-to-angular-2/) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
